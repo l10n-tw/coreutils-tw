@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: coreutils 8.30.79\n"
 "Report-Msgid-Bugs-To: bug-coreutils@gnu.org\n"
 "POT-Creation-Date: 2019-03-04 01:47-0800\n"
-"PO-Revision-Date: 2019-10-12 20:11+0800\n"
+"PO-Revision-Date: 2019-10-12 23:49+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <chinese-l10n@googlegroups.com>\n"
 "Language: zh_TW\n"
@@ -6963,8 +6963,8 @@ msgid ""
 "(default=1)\n"
 "                         see FIELDS below\n"
 msgstr ""
-"      --field=FIELDS   取代這些輸入欄的數字 (預設 = 1)\n"
-"                        請參閱下方〈欄位〉部份\n"
+"      --field=FIELDS   取代這些輸入列中的數字 (預設 = 1)\n"
+"                        請參閱下方〈FIELDS〉部份\n"
 
 #: src/numfmt.c:901
 msgid ""
@@ -7139,13 +7139,13 @@ msgid ""
 "Multiple fields/ranges can be separated with commas\n"
 msgstr ""
 "\n"
-"FIELDS 支援 cut(1) 樣式的區間：\n"
-"  N    從 1 欄數到第 N 欄\n"
-"  N-   從第 N 欄數到行末\n"
-"  N-M  從第 N 欄至第 M (含) 欄\n"
-"  -M   從第 1 欄至第 M (含) 欄\n"
-"  -    整行\n"
-"多個欄 / 區間可用逗號分隔\n"
+"FIELDS 支援 cut(1) 樣式的列數區間：\n"
+"  N    從第 1 列到第 N 列\n"
+"  N-   從第 N 列到行末\n"
+"  N-M  從第 N 列到第 M (含) 列\n"
+"  -M   從第 1 列至第 M (含) 列\n"
+"  -    整列\n"
+"多條列 / 區間可用逗號分隔\n"
 
 #: src/numfmt.c:989
 #, c-format
@@ -7179,9 +7179,9 @@ msgstr ""
 "\n"
 "如果所有輸入的數字皆成功轉換，則離開狀態碼是 0。\n"
 "預設情況下，%s 會在第一次轉換失敗停止，並回傳離開狀態碼 2。\n"
-"如果有 --invaild='fail'，則會在每次轉換錯誤後輸出警告，且狀態碼會是 2。\n"
-"如果有 --invaild='warn'，則會在每次轉換錯誤後輸出診斷訊息，但狀態碼會是 0。\n"
-"如果有 --invalid='ignore'，則轉換錯誤後不會顯示診斷訊息，且狀態碼仍是 0。\n"
+"如果加上 --invaild='fail'，則會在每次轉換錯誤後輸出警告，且狀態碼會是 2。\n"
+"如果加上 --invaild='warn'，則會在每次轉換錯誤後輸出診斷訊息，但狀態碼會是 0。\n"
+"如果加上 --invalid='ignore'，則轉換錯誤後不會顯示診斷訊息，且狀態碼仍是 0。\n"
 
 #: src/numfmt.c:1006
 #, c-format
@@ -7265,7 +7265,7 @@ msgstr "在輸入 %s:%s 中有無效後綴"
 msgid ""
 "value/precision too large to be printed: '%Lg/%<PRIuMAX>' (consider using --"
 "to)"
-msgstr "數值/精度太長以致無法輸出：'%Lg/%<PRIuMAX>' (考慮使用 --to)"
+msgstr "數值/精度太長以致無法輸出：'%Lg/%<PRIuMAX>' (請考慮使用 --to)"
 
 #: src/numfmt.c:1216
 #, c-format
@@ -7290,7 +7290,7 @@ msgstr "無效的填儲值 %s"
 #: src/numfmt.c:1513
 #| msgid "%s: invalid field specification %s"
 msgid "multiple field specifications"
-msgstr "有多個欄規格"
+msgstr "有多個列 (field) 規格"
 
 #: src/numfmt.c:1547
 #, c-format
@@ -7918,7 +7918,7 @@ msgid ""
 "                    unless -a is used. Balance number of lines in the\n"
 "                    columns on each page\n"
 msgstr ""
-"  +首頁[:末頁], --pages=首頁[:末頁]\n"
+"  +第一頁[:最後一頁], --pages=第一頁[:最後一頁]\n"
 "\t\t\t在指定的首頁/末頁處開始/停止列印\n"
 "  -列數, --columns=列數\n"
 "\t\t\t輸出指定的列數。如果指定了-a 選項，則從上到下列印。\n"
@@ -8089,7 +8089,7 @@ msgid ""
 "                     implied if PAGE_LENGTH <= 10\n"
 msgstr ""
 "  -t, --omit-header  省略頁面開頭及結尾；\n"
-"                     如果 PAGE_LENGTH (頁面長度) <= 10 則\n"
+"                     如果 <頁面長度> <= 10 則\n"
 "                     隱含啟用\n"
 
 #: src/pr.c:2826
@@ -9456,7 +9456,7 @@ msgstr ""
 "  -n, --numeric-sort          根據字串的數字值比較\n"
 "  -R, --random-sort           隨機排序，但對相同的鍵分組。請參閱 shuf(1)\n"
 "      --random-source=檔案    從 <檔案> 取得隨機位元組\n"
-"  -r, --reverse               反轉比較結果的順序reverse the result of comparisons\n"
+"  -r, --reverse               反轉比較結果的順序\n"
 
 #: src/sort.c:455
 msgid ""
