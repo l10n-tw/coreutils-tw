@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: coreutils 8.30.79\n"
 "Report-Msgid-Bugs-To: bug-coreutils@gnu.org\n"
 "POT-Creation-Date: 2019-03-04 01:47-0800\n"
-"PO-Revision-Date: 2019-10-12 17:01+0800\n"
+"PO-Revision-Date: 2019-10-12 18:59+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <chinese-l10n@googlegroups.com>\n"
 "Language: zh_TW\n"
@@ -8484,17 +8484,21 @@ msgid ""
 "  -v, --verbose                 report error messages\n"
 "  -z, --zero                    end each output line with NUL, not newline\n"
 msgstr ""
-"  -m, --canonicalize-missing\t遞迴跟隨給出檔名的所有符號連結以標準化，\n"
-"\t\t\t\t但不對元件存在性作出要求\n"
-"  -n, --no-newline\t不輸出後置的新行\n"
-"  -q, --quiet,\n"
-"  -s, --silent\t\t縮減大多數的錯誤訊息\n"
-"  -v, --verbose\t\t報告所有錯誤訊息\n"
+"  -m, --canonicalize-missing    canonicalize by following every symlink in\n"
+"                                every component of the given name "
+"recursively,\n"
+"                                without requirements on components "
+"existence\n"
+"  -n, --no-newline              不輸出末尾分隔符號\n"
+"  -q, --quiet\n"
+"  -s, --silent                  隱藏大部分的錯誤訊息 (預設開啟)\n"
+"  -v, --verbose                 回報錯誤訊息\n"
+"  -z, --zero                    使用 NUL 而非換行符號結束每行輸出行\n"
 
 #: src/readlink.c:152
 #, c-format
 msgid "ignoring --no-newline with multiple arguments"
-msgstr ""
+msgstr "忽略多於一個參數的 --no-newline"
 
 #: src/realpath.c:72
 msgid ""
@@ -8608,7 +8612,6 @@ msgstr ""
 "  -i                    每次刪除前提示確認\n"
 
 #: src/rm.c:140
-#, fuzzy
 #| msgid ""
 #| "  -I                    prompt once before removing more than three "
 #| "files, or\n"
@@ -8629,10 +8632,11 @@ msgid ""
 "      --interactive[=WHEN]  prompt according to WHEN: never, once (-I), or\n"
 "                          always (-i); without WHEN, prompt always\n"
 msgstr ""
-"  -I\t\t\t在刪除超過三個檔案或者遞迴刪除前要求確認。此選項比-i 提\n"
-"\t\t\t示內容更少，但同樣可以阻止大多數錯誤發生\n"
-"      --interactive[=WHEN]\t根據指定的WHEN 進行確認提示：never，once (-I)，\n"
-"\t\t\t\t或者always (-i)。如果此參數不加WHEN 則總是提示\n"
+"  -I                    當在遞迴移除多於 3 個檔案前提示一次；\n"
+"                          不會和 -i 一樣如此煩人，但仍能保護大部分的"
+"                          失誤行為\n"
+"      --interactive[=WHEN]  根據 WHEN 提示：never, once (-I) 或 always (-i)；\n"
+"                          如果沒指定 WHEN，則使用 always"
 
 #: src/rm.c:147
 msgid ""
@@ -8650,6 +8654,10 @@ msgid ""
 "                              with 'all', reject any command line argument\n"
 "                              on a separate device from its parent\n"
 msgstr ""
+"      --no-preserve-root  不特別針對 '/'\n"
+"      --preserve-root[=all]  不移除 '/' (預設值)；\n"
+"                              如配上 'all'，則會拒絕指令列參數中跟\n"
+"                              父裝置不同的裝置\n"
 
 #: src/rm.c:158
 msgid ""
@@ -8673,7 +8681,7 @@ msgstr ""
 "的目錄，以及其下所有的內容。\n"
 
 #: src/rm.c:170
-#, fuzzy, c-format
+#, c-format
 #| msgid ""
 #| "\n"
 #| "To remove a file whose name starts with a `-', for example `-foo',\n"
@@ -8690,8 +8698,10 @@ msgid ""
 "  %s ./-foo\n"
 msgstr ""
 "\n"
-"要刪除第一個字元為\"-\"的檔案 (例如\"-foo\")，請使用以下方法之一：\n"
+"若要移除檔名以 '-' 開頭的檔案，例如 '-foo'，\n"
+"請使用下方任一指令：\n"
 "  %s -- -foo\n"
+"\n"
 "  %s ./-foo\n"
 
 #: src/rm.c:179
@@ -8750,7 +8760,6 @@ msgstr ""
 "                  忽略僅由目錄非空產生的所有錯誤\n"
 
 #: src/rmdir.c:171
-#, fuzzy
 #| msgid ""
 #| "  -p, --parents   remove DIRECTORY and its ancestors; e.g., `rmdir -p a/b/"
 #| "c' is\n"
@@ -8762,9 +8771,9 @@ msgid ""
 "                    similar to 'rmdir a/b/c a/b a'\n"
 "  -v, --verbose   output a diagnostic for every directory processed\n"
 msgstr ""
-"  -p, --parents\t\t刪除指定目錄及其上級檔案夾，例如\"rmdir -p a/b/c'\"\n"
-"\t\t\t與\"rmdir a/b/c a/b a'\" 基本相同\n"
-"  -v, --verbose\t\t輸出處理的目錄詳情\n"
+"  -p, --parents   移除 <目錄> 及其上層；例如：「rmdir -p a/b/c」與\n"
+"                    「rmdir a/b/c a/b a」類似\n"
+"  -v, --verbose   對每個處理的目錄輸出診斷訊息\n"
 
 #: src/rmdir.c:241
 #, c-format
@@ -9357,7 +9366,7 @@ msgid "no lines to repeat"
 msgstr "沒有可重複的行"
 
 #: src/sleep.c:44
-#, fuzzy, c-format
+#, c-format
 #| msgid ""
 #| "Usage: %s NUMBER[SUFFIX]...\n"
 #| "  or:  %s OPTION\n"
@@ -9378,11 +9387,11 @@ msgid ""
 "specified by the sum of their values.\n"
 "\n"
 msgstr ""
-"用法：%s 數字[時間單位]...\n"
-"　或：%s 選項\n"
-"暫停指定的秒數。時間單位可以是s 表示秒(預設設定)，m 表示分鐘，\n"
-"h 表示小時，d 表示天。 指定數字可以是一個整數，也可以是浮點數。\n"
-"如果參數個數超過2 個，暫停的總時間為各個參數的值的和。\n"
+"用法:  %s 數字[後綴]...\n"
+"  或:  %s 選項\n"
+"暫停 <數字> 秒。<後綴> 可以是 's' 秒數 (預設值)、'm' 分鐘、'h' 小時，\n"
+"或 'd' 天。<數字> 不一定只能是整數。提供兩或以上個參數，則暫停參數值\n"
+"總和的時間。\n"
 "\n"
 
 #: src/sleep.c:132 src/timeout.c:332
@@ -9395,14 +9404,11 @@ msgid "cannot read realtime clock"
 msgstr "無法讀取即時時鐘"
 
 #: src/sort.c:424
-#, fuzzy
 #| msgid ""
 #| "Write sorted concatenation of all FILE(s) to standard output.\n"
 #| "\n"
 msgid "Write sorted concatenation of all FILE(s) to standard output.\n"
-msgstr ""
-"串聯排序所有指定檔案並將結果寫到標準輸出。\n"
-"\n"
+msgstr "將排序過的所有 <檔案> 一起寫入標準輸出。\n"
 
 #: src/sort.c:431
 msgid ""
@@ -9424,7 +9430,6 @@ msgstr ""
 "  -f, --ignore-case\t\t忽略字母大小寫\n"
 
 #: src/sort.c:441
-#, fuzzy
 #| msgid ""
 #| "  -g, --general-numeric-sort  compare according to general numerical "
 #| "value\n"
@@ -9435,10 +9440,9 @@ msgid ""
 "  -i, --ignore-nonprinting    consider only printable characters\n"
 "  -M, --month-sort            compare (unknown) < 'JAN' < ... < 'DEC'\n"
 msgstr ""
-"  -g, --general-numeric-sort\t按照一般數值排序\n"
-"  -i, --ignore-nonprinting\t只排序可列印字元\n"
-"  -M, --month-sort\t\t比較 (未知) < \"一月\" < ... < \"十二月\"\n"
-"\t\t\t\t在LC_ALL=C 時為(unknown) < `JAN' < ... < `DEC'\n"
+"  -g, --general-numeric-sort  根據一般數字值比較\n"
+"  -i, --ignore-nonprinting    僅考慮能輸出的字元\n"
+"  -M, --month-sort            依 (未知) < 'JAN' < ... < 'DEC' 比較\n"
 
 #: src/sort.c:446
 msgid ""
@@ -9446,7 +9450,6 @@ msgid ""
 msgstr "  -h, --human-numeric-sort    使用易讀性數位(例如： 2K 1G)\n"
 
 #: src/sort.c:449
-#, fuzzy
 #| msgid ""
 #| "  -n, --numeric-sort          compare according to string numerical "
 #| "value\n"
@@ -9460,10 +9463,10 @@ msgid ""
 "      --random-source=FILE    get random bytes from FILE\n"
 "  -r, --reverse               reverse the result of comparisons\n"
 msgstr ""
-"  -n, --numeric-sort\t\t根據字串數值比較\n"
-"  -R, --random-sort\t\t根據隨機hash 排序\n"
-"      --random-source=檔案\t從指定檔案中獲得隨機位元組\n"
-"  -r, --reverse\t\t\t逆序輸出排序結果\n"
+"  -n, --numeric-sort          根據字串的數字值比較\n"
+"  -R, --random-sort           隨機排序，但對相同的鍵分組。請參閱 shuf(1)\n"
+"      --random-source=檔案    從 <檔案> 取得隨機位元組\n"
+"  -r, --reverse               反轉比較結果的順序reverse the result of comparisons\n"
 
 #: src/sort.c:455
 msgid ""
@@ -9524,7 +9527,6 @@ msgstr ""
 "\t\t\t\t\t指定為\"-\"則從標準輸入讀檔名\n"
 
 #: src/sort.c:485
-#, fuzzy
 #| msgid ""
 #| "  -k, --key=POS1[,POS2]     start a key at POS1 (origin 1), end it at "
 #| "POS2\n"
@@ -9534,9 +9536,8 @@ msgid ""
 "  -k, --key=KEYDEF          sort via a key; KEYDEF gives location and type\n"
 "  -m, --merge               merge already sorted files; do not sort\n"
 msgstr ""
-"  -k, --key=位置1[,位置2]\t在位置1 開始一個key，在位置2 終止(預設為行尾)\n"
-"\t\t\t\t參看POS 語法。\n"
-"  -m, --merge\t\t\t合併已排序的檔案，不再進行排序\n"
+"  -k, --key=KEYDEF          依鍵排序；KEYDEF 會提供位置及類型\n"
+"  -m, --merge               合併已排序的檔案；不會排序\n"
 
 #: src/sort.c:489
 msgid ""
@@ -9570,7 +9571,6 @@ msgstr ""
 "  -u, --unique\t\t配合-c，嚴格校驗排序；不配合-c，則只輸出一次排序結果\n"
 
 #: src/sort.c:509
-#, fuzzy
 #| msgid ""
 #| "\n"
 #| "POS is F[.C][OPTS], where F is the field number and C the character "
@@ -9603,13 +9603,14 @@ msgid ""
 "SIZE may be followed by the following multiplicative suffixes:\n"
 msgstr ""
 "\n"
-"POS 是F[.C][OPTS]，F 代表域編號，C 是域中字母的位置，F 和C 均從1開始計數\n"
-"如果沒有有效的-t 或-b 選項存在，則從前置空格後開始計數字元。OPTS 是一個或多"
-"個\n"
-"由單個字母表示的順序選項，以此覆蓋此key 的全域順序設定。如果沒有指定key 則\n"
-"將其整個行。\n"
+"KEYDEF 是 F[.C][OPTS][,F[.C][OPTS]] 用於開始及停止位置，\n"
+"F 是欄碼，C 是欄中字元位置，兩者的原點皆為 1，且停止位置預設皆為\n"
+"行尾。如果 -t 和 -b 皆未作用，則欄中字元會從前置空白開頭開始計數。\n"
+"OPTS 是一或多個以單字元表示的排序選項 [bdfgiMhnRrV]，會覆蓋該鍵的\n"
+"全域排序選項。若未指定鍵，則會將一整行當鍵使用。使用 --debug 診斷\n"
+"不正確的鍵用法。\n"
 "\n"
-"指定的大小可以使用以下單位之一：\n"
+"<大小> 可以使用下方倍數後綴作為結尾：\n"
 
 #: src/sort.c:522
 msgid ""
@@ -9717,10 +9718,10 @@ msgid "^ no match for key\n"
 msgstr "^ 沒有符合項\n"
 
 #: src/sort.c:2460
-#, fuzzy, c-format
+#, c-format
 #| msgid "obsolescent key `%s' used; consider `%s' instead"
 msgid "obsolescent key %s used; consider %s instead"
-msgstr "使用了舊的值%s，考慮轉為使用%s"
+msgstr "使用了過時的鍵 %s；請考慮用 %s 代替"
 
 #: src/sort.c:2467
 #, c-format
@@ -9728,11 +9729,11 @@ msgid "key %lu has zero width and will be ignored"
 msgstr "值%lu 寬度為零，忽略"
 
 #: src/sort.c:2476
-#, fuzzy, c-format
+#, c-format
 #| msgid ""
 #| "leading blanks are significant in key %lu; consider also specifying `b'"
 msgid "leading blanks are significant in key %lu; consider also specifying 'b'"
-msgstr "值%lu 開頭有大量空格，考慮同時指定\"b\""
+msgstr "前置空白在 %lu 鍵是有意義的；請考慮亦指定 'b'"
 
 #: src/sort.c:2489
 #, c-format
@@ -9834,16 +9835,15 @@ msgid "no input from %s"
 msgstr "沒有來自 %s 的輸入"
 
 #: src/sort.c:4692
-#, fuzzy, c-format
+#, c-format
 #| msgid "using %s sorting rules"
 msgid "text ordering performed using %s sorting rules"
-msgstr "使用%s 排序規則"
+msgstr "已使用 %s 排序規則執行文字排序"
 
 #: src/sort.c:4696
-#, fuzzy
 #| msgid "using simple byte comparison"
 msgid "text ordering performed using simple byte comparison"
-msgstr "使用簡單位元組比較"
+msgstr "已使用簡易位元組比較執行文字排序"
 
 #: src/sort.c:4728
 #, c-format
@@ -9861,7 +9861,6 @@ msgid "Usage: %s [OPTION]... [FILE [PREFIX]]\n"
 msgstr "用法：%s [選項]... [檔案 [前綴]]\n"
 
 #: src/split.c:230
-#, fuzzy
 #| msgid ""
 #| "Output fixed-size pieces of INPUT to PREFIXaa, PREFIXab, ...; default\n"
 #| "size is 1000 lines, and default PREFIX is `x'.  With no INPUT, or when "
@@ -9872,13 +9871,11 @@ msgid ""
 "Output pieces of FILE to PREFIXaa, PREFIXab, ...;\n"
 "default size is 1000 lines, and default PREFIX is 'x'.\n"
 msgstr ""
-"將輸入內容分割為固定大小的分片並輸出到\"前綴aa\"、\"前綴ab\",...；\n"
-"預設以 1000 行為分割單位，預設前綴為\"x\"。如果不指定檔案，或\n"
-"者檔案為\"-\"，則從標準輸入讀取資料。\n"
-"\n"
+"將多個 <檔案> 片段輸出成 <前綴>aa, <前綴>ab, ...；\n"
+"預設大小是 1000 行，且預設前綴是「x」。\n"
 
 #: src/split.c:238
-#, fuzzy, c-format
+#, c-format
 #| msgid ""
 #| "  -a, --suffix-length=N   use suffixes of length N (default %d)\n"
 #| "  -b, --bytes=SIZE        put SIZE bytes per output file\n"
@@ -9911,14 +9908,21 @@ msgid ""
 "                            '\\0' (zero) specifies the NUL character\n"
 "  -u, --unbuffered        immediately copy input to output with '-n r/...'\n"
 msgstr ""
-"  -a, --suffix-length=N\t指定後綴長度為N (預設為%d)\n"
-"  -b, --bytes=大小\t\t指定每個輸出檔案的位元組大小\n"
-"  -C, --line-bytes=大小\t指定每個輸出檔案裡最大行位元組大小\n"
-"  -d, --numeric-suffixes \t使用數字後綴代替字母后綴\n"
-"  -e, --elide-empty-files\t和-n 一起使用時不產生空的輸出檔案\n"
-"  -l, --lines=數值\t\t指定每個輸出檔案有多少行\n"
-"  -n, --number=塊數\t\t產生塊數輸出檔案。參看下面的說明。\n"
-"  -u, --unbuffered\t\t立即使用-n r/... 複製輸入到輸出\n"
+"  -a, --suffix-length=N   產生長度 N 的後綴 (預設值 %d)\n"
+"      --additional-suffix=後綴    將額外的 <後綴> 加到檔名末尾\n"
+"  -b, --bytes=SIZE        給每個輸出檔放入 SIZE 位元組\n"
+"  -C, --line-bytes=SIZE   每個輸出檔最多只能放入 SIZE 位元組記錄\n"
+"  -d                      使用開始值是 0 的數字後綴，而非字母後綴\n"
+"      --numeric-suffixes[=FROM]  跟 -d 相同，但能設定開始值\n"
+"  -x                      使用開始值是 0 的十六進位後綴，而非字母後綴\n"
+"      --hex-suffixes[=FROM]  跟 -x 相同，但能設定開始值\n"
+"  -e, --elide-empty-files  不使用 '-n' 產生空的輸出檔\n"
+"      --filter=指令       寫入 shell <指令>，檔名是 $FILE\n"
+"  -l, --lines=NUMBER      給每個輸出檔放入 NUMBER 行 / 條記錄\n"
+"  -n, --number=CHUNKS     產生 CHUNKS 個輸出檔；請參閱下方的解釋。\n"
+"  -t, --separator=分隔符  使用 <分隔符> 作為記錄分隔符而非換行符號；\n"
+"                            '\\0' (零) 會指定 NUL 字元\n"
+"  -u, --unbuffered        使用 '-n r/...' 立即複製輸入至輸出\n"
 
 #: src/split.c:256
 msgid ""
@@ -9927,7 +9931,6 @@ msgid ""
 msgstr "      --verbose\t\t在每個輸出檔案開啟前輸出檔案特徵\n"
 
 #: src/split.c:263
-#, fuzzy
 #| msgid ""
 #| "\n"
 #| "CHUNKS may be:\n"
@@ -9948,13 +9951,13 @@ msgid ""
 "  r/K/N   likewise but only output Kth of N to stdout\n"
 msgstr ""
 "\n"
-"塊數可能為：\n"
-"N\t基於輸入的大小分割為N 個檔案\n"
-"K/N\t將N 個檔案中的第K 個輸出到標準輸出\n"
-"l/N\t分割為N 個檔案，但分割時不切斷行\n"
-"l/K/N\t將N 個檔案中的第K 個輸出到標準輸出，但分割時不切斷行\n"
-"r/N\t類似l 但使用輪詢分配\n"
-"r/K/N\t類似r/N 但盡將N 個檔案中的第K 個輸出到標準輸出\n"
+"CHUNKS 可以是：\n"
+"  N       基於輸入大小切分成 N 個檔案\n"
+"  K/N     輸出第 K 個 N 至標準輸出\n"
+"  l/N     切分成 N 個檔案而不分割行 / 記錄\n"
+"  l/K/N   輸出第 k 個 N 至標準輸出而不分割行 / 記錄\n"
+"  r/N     類似 'l' 但使用輪替分配方式 (round robin distribution)\n"
+"  r/K/N   類似上者，但只輸出第 K 個 N 至標準輸出\n"
 
 #: src/split.c:450
 msgid "output file suffixes exhausted"
@@ -10015,12 +10018,12 @@ msgstr "正在等待子執行程序"
 #: src/split.c:571
 #, c-format
 msgid "with FILE=%s, signal %s from command: %s"
-msgstr ""
+msgstr "使用 FILE(檔案)=%s，下述指令傳送 %s 信號：%s"
 
 #: src/split.c:579
 #, c-format
 msgid "with FILE=%s, exit %d from command: %s"
-msgstr ""
+msgstr "使用 FILE(檔案)=%s，下述指令傳送 %d 離開碼：%s"
 
 #: src/split.c:586
 #, c-format
@@ -10046,19 +10049,18 @@ msgstr "無效的後綴長度"
 
 #: src/split.c:1412
 msgid "empty record separator"
-msgstr ""
+msgstr "記錄分隔符是空白的"
 
 #: src/split.c:1423
-#, fuzzy, c-format
+#, c-format
 #| msgid "multi-character tab %s"
 msgid "multi-character separator %s"
-msgstr "多字元標籤%s"
+msgstr "有多字元分隔符 %s"
 
 #: src/split.c:1431
-#, fuzzy
 #| msgid "multiplexed character special file"
 msgid "multiple separator characters specified"
-msgstr "復用字元特殊檔案"
+msgstr "指定了多個分隔符字元"
 
 #: src/split.c:1462
 #, c-format
@@ -10066,16 +10068,16 @@ msgid "line count option -%s%c... is too large"
 msgstr "行數選項-%s%c... 過大"
 
 #: src/split.c:1479
-#, fuzzy, c-format
+#, c-format
 #| msgid "invalid starting line number: %s"
 msgid "%s: invalid start value for numerical suffix"
-msgstr "無效的起始行號：%s"
+msgstr "%s：無效的數字後綴開始值"
 
 #: src/split.c:1480
-#, fuzzy, c-format
+#, c-format
 #| msgid "invalid starting line number: %s"
 msgid "%s: invalid start value for hexadecimal suffix"
-msgstr "無效的起始行號：%s"
+msgstr "%s：無效的十六進位後綴開始值"
 
 #: src/split.c:1504
 msgid "invalid IO block size"
@@ -10084,12 +10086,12 @@ msgstr "無效的 IO 塊大小"
 #: src/split.c:1522
 #, c-format
 msgid "--filter does not process a chunk extracted to stdout"
-msgstr ""
+msgstr "--filter 不處理擷取至標準輸出的區塊 (chunk)"
 
 #: src/split.c:1562
 #, c-format
 msgid "numerical suffix start value is too large for the suffix length"
-msgstr ""
+msgstr "數字後綴開始值對後綴長度而言太長"
 
 #: src/split.c:1594
 #, c-format
