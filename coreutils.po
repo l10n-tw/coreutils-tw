@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: coreutils 8.30.79\n"
 "Report-Msgid-Bugs-To: bug-coreutils@gnu.org\n"
 "POT-Creation-Date: 2019-03-04 01:47-0800\n"
-"PO-Revision-Date: 2019-07-17 16:54+0800\n"
+"PO-Revision-Date: 2019-10-12 17:01+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <chinese-l10n@googlegroups.com>\n"
 "Language: zh_TW\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 19.08.2\n"
 "X-ZhConverter: 繁化姬 dict-fa3f548e-r876 @ 2019/07/17 13:29:50 |"
 " https://zhconvert.org\n"
 
@@ -6963,6 +6963,8 @@ msgid ""
 "(default=1)\n"
 "                         see FIELDS below\n"
 msgstr ""
+"      --field=FIELDS   取代這些輸入欄的數字 (預設 = 1)\n"
+"                        請參閱下方〈欄位〉部份\n"
 
 #: src/numfmt.c:901
 msgid ""
@@ -6978,12 +6980,14 @@ msgid ""
 "'none';\n"
 "                         see UNIT below\n"
 msgstr ""
+"      --from=單位      自動將輸入的數字進位成 <單位>；預設為「none」\n"
+"                         請參閱下方〈單位〉部份\n"
 
 #: src/numfmt.c:909
 msgid ""
 "      --from-unit=N    specify the input unit size (instead of the default "
 "1)\n"
-msgstr ""
+msgstr "      --from-unit=N    指定輸入單位大小 (而非預設值 1)\n"
 
 #: src/numfmt.c:912
 msgid ""
@@ -6992,12 +6996,16 @@ msgid ""
 "                         (which means it has no effect in the C/POSIX "
 "locale)\n"
 msgstr ""
+"      --grouping       使用區域定義的位數分組方式，例如 1,000,000\n"
+"                         (亦代表著其在 C/POSIX 區域沒有作用)\n"
 
 #: src/numfmt.c:916
 msgid ""
 "      --header[=N]     print (without converting) the first N header lines;\n"
 "                         N defaults to 1 if not specified\n"
 msgstr ""
+"      --header[=N]     輸出 (而不轉換) 前 N 開頭行；\n"
+"                         若未指定，則 N 預設值為 1\n"
 
 #: src/numfmt.c:920
 msgid ""
@@ -7016,6 +7024,9 @@ msgid ""
 "whitespace\n"
 "                         is found\n"
 msgstr ""
+"      --padding=N      填充輸出到 N 個字元；如果 N 是正數，則\n"
+"                         會靠右對齊，負數則靠左對齊；如果輸出長於 N，\n"
+"                         則會忽略填充；預設值是在有空白時自動填充。\n"
 
 #: src/numfmt.c:931
 msgid ""
@@ -7023,17 +7034,22 @@ msgid ""
 "                         up, down, from-zero (default), towards-zero, "
 "nearest\n"
 msgstr ""
+"      --round=方式     設定進位時的捨去 <方式>；方式可為：\n"
+"                         up, down, from-zero (預設值), towards-zero, "
+"nearest\n"
 
 #: src/numfmt.c:935
 msgid ""
 "      --suffix=SUFFIX  add SUFFIX to output numbers, and accept optional\n"
 "                         SUFFIX in input numbers\n"
 msgstr ""
+"      --suffix=後綴    對輸出數字新增 <後綴>，並接受輸入數字可以有\n"
+"                         <後綴>\n"
 
 #: src/numfmt.c:939
 msgid ""
 "      --to=UNIT        auto-scale output numbers to UNITs; see UNIT below\n"
-msgstr ""
+msgstr "      --to=單位        自動將輸出數字進位至 <單位>；請參閱下方〈單位〉部份\n"
 
 #: src/numfmt.c:942
 msgid ""
@@ -7103,7 +7119,6 @@ msgstr ""
 "               ...\n"
 
 #: src/numfmt.c:979
-#, fuzzy
 #| msgid ""
 #| "Each range is one of:\n"
 #| "\n"
@@ -7123,13 +7138,14 @@ msgid ""
 "  -    all fields\n"
 "Multiple fields/ranges can be separated with commas\n"
 msgstr ""
-"每種參數格式表示範圍如下：\n"
-"    N\t從第1 個開始數的第N 個位元組、字元或域\n"
-"    N-\t從第N 個開始到所在行結束的所有字元、位元組或域\n"
-"    N-M\t從第N 個開始到第M 個之間(包括第M 個)的所有字元、位元組或域\n"
-"    -M\t從第1 個開始到第M 個之間(包括第M 個)的所有字元、位元組或域\n"
 "\n"
-"當沒有檔案參數，或者檔案不存在時，從標準輸入讀取\n"
+"FIELDS 支援 cut(1) 樣式的區間：\n"
+"  N    從 1 欄數到第 N 欄\n"
+"  N-   從第 N 欄數到行末\n"
+"  N-M  從第 N 欄至第 M (含) 欄\n"
+"  -M   從第 1 欄至第 M (含) 欄\n"
+"  -    整行\n"
+"多個欄 / 區間可用逗號分隔\n"
 
 #: src/numfmt.c:989
 #, c-format
@@ -7142,6 +7158,12 @@ msgid ""
 "will zero pad the number. Optional negative values (%-10f) will left align.\n"
 "Optional precision (%.1f) will override the input determined precision.\n"
 msgstr ""
+"\n"
+"<格式> 必須能剛好輸出一個浮點數參數「%f」。選擇性的引號 (%'f) 會啟用\n"
+"--grouping (如果目前的區域設定支援)。\n"
+"選擇性的寬度值 (%10f) 會填充輸出。選擇性的 0 (%010f) 寬度會使用 0 來\n"
+"填充輸出。選擇性的負數值 (%-10f) 會靠左對齊。選擇性的精度 (%.1f) 會覆寫\n"
+"輸入決定的精度。\n"
 
 #: src/numfmt.c:997
 #, c-format
@@ -7154,6 +7176,12 @@ msgid ""
 "diagnosed, but the exit status is 0.  With --invalid='ignore' conversion\n"
 "errors are not diagnosed and the exit status is 0.\n"
 msgstr ""
+"\n"
+"如果所有輸入的數字皆成功轉換，則離開狀態碼是 0。\n"
+"預設情況下，%s 會在第一次轉換失敗停止，並回傳離開狀態碼 2。\n"
+"如果有 --invaild='fail'，則會在每次轉換錯誤後輸出警告，且狀態碼會是 2。\n"
+"如果有 --invaild='warn'，則會在每次轉換錯誤後輸出診斷訊息，但狀態碼會是 0。\n"
+"如果有 --invalid='ignore'，則轉換錯誤後不會顯示診斷訊息，且狀態碼仍是 0。\n"
 
 #: src/numfmt.c:1006
 #, c-format
@@ -7205,7 +7233,7 @@ msgstr "無效的格式 %s（寬度溢位）"
 #: src/numfmt.c:1091
 #, c-format
 msgid "--format padding overriding --padding"
-msgstr ""
+msgstr "--format padding 會覆蓋 --padding"
 
 #: src/numfmt.c:1110 src/seq.c:260
 #, c-format
@@ -7220,7 +7248,7 @@ msgstr "格式 %s 中存在無效的精度"
 #: src/numfmt.c:1132
 #, c-format
 msgid "invalid format %s, directive must be %%[0]['][-][N][.][N]f"
-msgstr ""
+msgstr "%s 格式無效，指令必須是 %%[0]['][-][N][.][N]f"
 
 #: src/numfmt.c:1140 src/seq.c:267
 #, c-format
@@ -7237,7 +7265,7 @@ msgstr "在輸入 %s:%s 中有無效後綴"
 msgid ""
 "value/precision too large to be printed: '%Lg/%<PRIuMAX>' (consider using --"
 "to)"
-msgstr ""
+msgstr "數值/精度太長以致無法輸出：'%Lg/%<PRIuMAX>' (考慮使用 --to)"
 
 #: src/numfmt.c:1216
 #, c-format
@@ -7260,16 +7288,15 @@ msgid "invalid padding value %s"
 msgstr "無效的填儲值 %s"
 
 #: src/numfmt.c:1513
-#, fuzzy
 #| msgid "%s: invalid field specification %s"
 msgid "multiple field specifications"
-msgstr "%s：無效的區塊規格%s"
+msgstr "有多個欄規格"
 
 #: src/numfmt.c:1547
-#, fuzzy, c-format
+#, c-format
 #| msgid "invalid date %s"
 msgid "invalid header value %s"
-msgstr "無效的日期%s"
+msgstr "標頭值 %s 無效"
 
 #: src/numfmt.c:1574
 msgid "--grouping cannot be combined with --format"
@@ -7286,15 +7313,14 @@ msgid "no conversion option specified"
 msgstr "未指定轉換選項"
 
 #: src/numfmt.c:1590
-#, fuzzy
 #| msgid "file operands cannot be combined with --files0-from"
 msgid "grouping cannot be combined with --to"
-msgstr "檔案運算元不能於--files0-from 參數一起使用"
+msgstr "分組 (--grouping) 不能與 --to 一起使用"
 
 #: src/numfmt.c:1592
 #, c-format
 msgid "grouping has no effect in this locale"
-msgstr ""
+msgstr "在此區域設定中，分組 (--grouping) 沒有效果"
 
 #: src/numfmt.c:1605
 #, c-format
