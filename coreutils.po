@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: coreutils 8.30.79\n"
 "Report-Msgid-Bugs-To: bug-coreutils@gnu.org\n"
 "POT-Creation-Date: 2019-03-04 01:47-0800\n"
-"PO-Revision-Date: 2019-10-12 18:59+0800\n"
+"PO-Revision-Date: 2019-10-12 20:11+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <chinese-l10n@googlegroups.com>\n"
 "Language: zh_TW\n"
@@ -7840,10 +7840,9 @@ msgid "integer overflow"
 msgstr "整數溢位"
 
 #: src/pr.c:916
-#, fuzzy
 #| msgid "`--pages=FIRST_PAGE[:LAST_PAGE]' missing argument"
 msgid "'--pages=FIRST_PAGE[:LAST_PAGE]' missing argument"
-msgstr "\"--pages=首頁[:末頁]\"缺失參數"
+msgstr "'--pages=第一頁[:最後一頁]' 缺少參數"
 
 #: src/pr.c:918
 #, c-format
@@ -7851,32 +7850,28 @@ msgid "invalid page range %s"
 msgstr "頁碼範圍%s 無效"
 
 #: src/pr.c:978
-#, fuzzy
 #| msgid "`-l PAGE_LENGTH' invalid number of lines: %s"
 msgid "'-l PAGE_LENGTH' invalid number of lines"
-msgstr "\"-l 頁長\"中含有無效的行號：%s"
+msgstr "'-l 頁長' 有無效的行數"
 
 #: src/pr.c:993
-#, fuzzy
 #| msgid "`-N NUMBER' invalid starting line number: %s"
 msgid "'-N NUMBER' invalid starting line number"
-msgstr "\"-N 編號\"中含有無效的起始行號：%s"
+msgstr "'-N 數字' 有無效的開始行碼"
 
 #: src/pr.c:997
 msgid "'-o MARGIN' invalid line offset"
 msgstr "「-o 頁邊距」中含有無效的行偏移量"
 
 #: src/pr.c:1034
-#, fuzzy
 #| msgid "`-w PAGE_WIDTH' invalid number of characters: %s"
 msgid "'-w PAGE_WIDTH' invalid number of characters"
-msgstr "\"-w \"中含有無效的字元數：%s"
+msgstr "'-w 頁長' 有無效的字數"
 
 #: src/pr.c:1043
-#, fuzzy
 #| msgid "`-W PAGE_WIDTH' invalid number of characters: %s"
 msgid "'-W PAGE_WIDTH' invalid number of characters"
-msgstr "\"-w \"中含有無效的字元數：%s"
+msgstr "'-W 頁長' 有無效的字元數"
 
 #: src/pr.c:1072
 msgid "cannot specify number of columns when printing in parallel"
@@ -7887,10 +7882,10 @@ msgid "cannot specify both printing across and printing in parallel"
 msgstr "無法同時指定相交輸出和平行輸出參數"
 
 #: src/pr.c:1179
-#, fuzzy, c-format
+#, c-format
 #| msgid "`-%c' extra characters or invalid number in the argument: %s"
 msgid "'-%c' extra characters or invalid number in the argument: %s"
-msgstr "有多餘字元\"-%c\"或無效數字出現在參數%s 中"
+msgstr "'-%c' 的參數中有多餘的字元或無效的數字：%s"
 
 #: src/pr.c:1281
 msgid "page width too narrow"
@@ -7981,7 +7976,6 @@ msgstr ""
 "\t\t\t\t--sep-string[=字串] 設定分隔符\n"
 
 #: src/pr.c:2783
-#, fuzzy
 #| msgid ""
 #| "  -l, --length=PAGE_LENGTH\n"
 #| "                    set the page length to PAGE_LENGTH (66) lines\n"
@@ -7995,14 +7989,12 @@ msgid ""
 "                    (default number of lines of text 56, and with -F 63).\n"
 "                    implies -t if PAGE_LENGTH <= 10\n"
 msgstr ""
-"  -l, --length=頁長\n"
-"\t\t\t使用指定頁長的行數(預設66)\n"
-"\t\t\t(預設文字行數為56，當啟用-F 時為 63)\n"
-"  -m, --merge\t\t在同一行顯示所有檔案，每個檔案占用一欄，分割行，但是當\n"
-"\t\t\t使用-J 時將行合併到完整長度\n"
+"  -l, --length=頁面長度\n"
+"                    設定頁面長度至 <頁面長度> (66) 行\n"
+"                    (預設文字行數為 56，加上 -F 是 63）。\n"
+"                    如果 <頁面長度> <= 10 則隱含 -t\n"
 
 #: src/pr.c:2789
-#, fuzzy
 #| msgid ""
 #| "  -l, --length=PAGE_LENGTH\n"
 #| "                    set the page length to PAGE_LENGTH (66) lines\n"
@@ -8014,11 +8006,8 @@ msgid ""
 "  -m, --merge       print all files in parallel, one in each column,\n"
 "                    truncate lines, but join lines of full length with -J\n"
 msgstr ""
-"  -l, --length=頁長\n"
-"\t\t\t使用指定頁長的行數(預設66)\n"
-"\t\t\t(預設文字行數為56，當啟用-F 時為 63)\n"
-"  -m, --merge\t\t在同一行顯示所有檔案，每個檔案占用一欄，分割行，但是當\n"
-"\t\t\t使用-J 時將行合併到完整長度\n"
+"  -m, --merge       平行輸出所有檔案，每個檔案都在各自的欄位，\n"
+"                    會截行，但可以使用 -J 把行合併至完整長度。\n"
 
 #: src/pr.c:2793
 msgid ""
@@ -8050,7 +8039,6 @@ msgstr ""
 "\t\t\t當檔案無法開啟時忽略警告\n"
 
 #: src/pr.c:2808
-#, fuzzy
 #| msgid ""
 #| "  -s[CHAR], --separator[=CHAR]\n"
 #| "                    separate columns by a single character, default for "
@@ -8068,13 +8056,13 @@ msgid ""
 "                    -s[CHAR] turns off line truncation of all 3 column\n"
 "                    options (-COLUMN|-a -COLUMN|-m) except -w is set\n"
 msgstr ""
-"  -s[CHAR], --separator[=CHAR]\n"
-"\t\t\t由單個字元分隔各列，未附加-w 時預設為製表符，否則為空。\n"
-"\t\t\t另外除非-w 選項被指定，否則\"-s[CHAR]\"會封鎖三個列相關\n"
-"\t\t\t的截行選項(-COLUMN|-a -COLUMN|-m)\n"
+"  -s[字元], --separator[=字元]\n"
+"                    依單個字元分隔列，如果沒有 -w，\n"
+"                    則預設的 <字元> 是 TAB 字元，如果有 -w\n"
+"                    則預設沒有字元。除非設定了 -w，否則 -s[字元]\n"
+"                    會關閉全部 3 列選項 (-列|-a -列|-m) 的截行功能。"
 
 #: src/pr.c:2816
-#, fuzzy
 #| msgid ""
 #| "  -SSTRING, --sep-string[=STRING]\n"
 #| "                    separate columns by STRING,\n"
@@ -8090,17 +8078,19 @@ msgid ""
 "                    otherwise (same as -S\" \"), no effect on column "
 "options\n"
 msgstr ""
-"  -S字串, --sep-string[=字串]\n"
-"\t\t\t使用指定的字串分欄，不使用-S 則使用預設的製表符\n"
-"\t\t\tTAB 作為分隔符，與-J 和空格一起使用(等於-S\" \")對\n"
-"\t\t\t分欄選項無影響\n"
-"  -t, --omit-header\t忽略頁首和頁尾\n"
+"  -S[字串], --sep-string[=字串]\n"
+"                    依 <字串> 分隔列，\n"
+"                    沒有 -S：若有 -J 則預設的分隔符號是 TAB，反之 <空白>\n"
+"                    否則 (等於 -S\" \") 不會影響到列選項\n"
 
 #: src/pr.c:2822
 msgid ""
 "  -t, --omit-header  omit page headers and trailers;\n"
 "                     implied if PAGE_LENGTH <= 10\n"
 msgstr ""
+"  -t, --omit-header  省略頁面開頭及結尾；\n"
+"                     如果 PAGE_LENGTH (頁面長度) <= 10 則\n"
+"                     隱含啟用\n"
 
 #: src/pr.c:2826
 msgid ""
@@ -10214,7 +10204,6 @@ msgstr ""
 "  -f, --file-system     顯示檔案系統狀態而非檔案狀態\n"
 
 #: src/stat.c:1529
-#, fuzzy
 #| msgid ""
 #| "  -c  --format=FORMAT   use the specified FORMAT instead of the default;\n"
 #| "                          output a newline after each use of FORMAT\n"
@@ -10231,14 +10220,14 @@ msgid ""
 "                          if you want a newline, include \\n in FORMAT\n"
 "  -t, --terse           print the information in terse form\n"
 msgstr ""
-"  -c --format=格式\t使用指定輸出格式代替預設值，每用一次指定格式換一新行\n"
-"      --printf=格式\t類似 --format，但是會解釋反斜線跳脫字元，不使用換行作\n"
-"\t\t\t\t輸出結尾。如果您仍希望使用換行，可以在格式中\n"
-"\t\t\t\t加入\"\\n\"\n"
-"  -t, --terse\t\t使用簡潔格式輸出\n"
+"  -c  --format=格式     使用指定的 <格式> 而非預設值；\n"
+"                          在每次使用 <格式> 後輸出換行\n"
+"      --printf=格式       類似 --format，但會解譯反斜線，\n"
+"                          且不輸出強制性的末尾換行；\n"
+"                          若要換行，請在 <格式> 中加上 \\n \n"
+"  -t, --terse           輸出簡潔格式的資訊\n"
 
 #: src/stat.c:1540
-#, fuzzy
 msgid ""
 "\n"
 "The valid format sequences for files (without --file-system):\n"
@@ -10250,16 +10239,15 @@ msgid ""
 "  %C   SELinux security context string\n"
 msgstr ""
 "\n"
-"有效的檔案格式序列(不使用 --file-system)：\n"
+"對檔案有效的格式序列 (不包含 --file-system)：\n"
 "\n"
-"  %a\t八進位權限\n"
-"  %A   用可讀性較好的方式輸出權限\n"
-"  %b   計算已分配塊數(參見%B)\n"
-"  %B   以位元組為單位輸出%b 所報告的每個塊的大小\n"
-"  %C   SELinux 安全上下文字串\n"
+"  %a   八進位格式的存取權限 (注意 '#' 和 '0' printf 標記)\n"
+"  %A   人類可讀格式的存取權限\n"
+"  %b   配置的區塊數 (請參閱 %B)\n"
+"  %B   %b 回報的每個區塊大小 (位元組)\n"
+"  %C   SELinux 安全性上下文字串\n"
 
 #: src/stat.c:1549
-#, fuzzy
 #| msgid ""
 #| "  %d   Device number in decimal\n"
 #| "  %D   Device number in hex\n"
@@ -10275,15 +10263,14 @@ msgid ""
 "  %g   group ID of owner\n"
 "  %G   group name of owner\n"
 msgstr ""
-"  %d\t十進位裝置編號\n"
-"  %D\t十六進位裝置編號\n"
-"  %f\t十六進位原始模式\n"
-"  %F\t檔案類型\n"
-"  %g\t檔案的屬ID群組\n"
-"  %G\t檔案的群組組名\n"
+"  %d   裝置號碼 (十進位)\n"
+"  %D   裝置號碼 (十六進位)\n"
+"  %f   原始 (Raw) 模式 (十六進位)\n"
+"  %F   檔案類型\n"
+"  %g   擁有者的群組 ID\n"
+"  %G   擁有者的群組名稱\n"
 
 #: src/stat.c:1557
-#, fuzzy
 #| msgid ""
 #| "  %h   Number of hard links\n"
 #| "  %i   Inode number\n"
@@ -10305,18 +10292,17 @@ msgid ""
 "  %t   major device type in hex, for character/block device special files\n"
 "  %T   minor device type in hex, for character/block device special files\n"
 msgstr ""
-"  %h\t實際連結 (hardlink) 數量\n"
-"  %i\tInode 編號\n"
-"  %m\t掛載點\n"
-"  %n\t檔名\n"
-"  %N\t如果物件是一個符號連結，顯示引用到的其它檔名\n"
-"  %o\tI/O 塊大小\n"
-"  %s\t總計大小，以位元組為單位\n"
-"  %t\t十六進位主裝置類型\n"
-"  %T\t十六進位子裝置類型\n"
+"  %h   實際連結數量\n"
+"  %i   inode 號碼\n"
+"  %m   掛載點\n"
+"  %n   檔名\n"
+"  %N   用引號括住的檔名，如果是符號連結，則是實際路徑\n"
+"  %o   最佳 I/O 傳輸大小提示\n"
+"  %s   總計大小 (位元組)\n"
+"  %t   主要裝置類型 (十六進位)，用於字元/區塊裝置特殊檔案\n"
+"  %T   次要裝置類型 (十六進位)，用於字元/區塊裝置特殊檔案\n"
 
 #: src/stat.c:1568
-#, fuzzy
 #| msgid ""
 #| "  %u   User ID of owner\n"
 #| "  %U   User name of owner\n"
@@ -10342,20 +10328,19 @@ msgid ""
 "  %Z   time of last status change, seconds since Epoch\n"
 "\n"
 msgstr ""
-"  %u\t檔案的所有者ID\n"
-"  %U\t檔案的所有者使用者名稱\n"
-"  %w\t檔案建立時間，若未知則顯示\"-\"\n"
-"  %W\t從UNIX 元年起以秒計的檔案建立時間，若未知則顯示\"-\"\n"
-"  %x\t上次存取時間\n"
-"  %X\t從UNIX 元年起以秒計的上次存取時間\n"
-"  %y\t上次修改時間\n"
-"  %Y\t從UNIX 元年起以秒計的上次修改時間\n"
-"  %z\t上次變更時間\n"
-"  %Z\t從UNIX 元年起以秒計的上次變更時間\n"
+"  %u   擁有者的使用者 ID\n"
+"  %U   擁有者的使用者名稱\n"
+"  %w   檔案建立時間，人類可讀；如果未知則為 -\n"
+"  %W   檔案建立時間，從 Epoch 以來的秒數；如果未知則為 0\n"
+"  %x   上次存取時間，人類可讀\n"
+"  %X   上次存取時間，從 Epoch 以來的秒數\n"
+"  %y   上次資料修改的時間，人類可讀\n"
+"  %Y   上次資料修改的時間，從 Epoch 以來的秒數\n"
+"  %z   上次狀態變更的時間，人類可讀\n"
+"  %Z   上次狀態變更的時間，從 Epoch 以來的秒數\n"
 "\n"
 
 #: src/stat.c:1582
-#, fuzzy
 #| msgid ""
 #| "Valid format sequences for file systems:\n"
 #| "\n"
@@ -10373,16 +10358,15 @@ msgid ""
 "  %d   free file nodes in file system\n"
 "  %f   free blocks in file system\n"
 msgstr ""
-"有效的檔案系統格式序列：\n"
+"對檔案系統有效的格式序列：\n"
 "\n"
-"  %a\t非超級使用者可用的剩餘塊數\n"
-"  %b\t檔案系統的總資料塊數\n"
-"  %c\t檔案系統中檔案節點總數\n"
-"  %d\t檔案系統中空閒檔案節點數\n"
-"  %f\t檔案系統中空閒塊數\n"
+"  %a   有可用給非超級使用者 (su) 的剩餘區塊\n"
+"  %b   檔案系統中的總計資料區塊\n"
+"  %c   檔案系統中的總計檔案節點\n"
+"  %d   檔案系統中的剩餘檔案節點\n"
+"  %f   檔案系統中的剩餘區塊\n"
 
 #: src/stat.c:1591
-#, fuzzy
 #| msgid ""
 #| "  %i   File System ID in hex\n"
 #| "  %l   Maximum length of filenames\n"
@@ -10400,13 +10384,13 @@ msgid ""
 "  %t   file system type in hex\n"
 "  %T   file system type in human readable form\n"
 msgstr ""
-"  %i\t十六進位檔案系統ID\n"
-"  %I\t允許的檔名最大長度\n"
-"  %n\t檔名\n"
-"  %s\t塊大小(用於快速傳輸)\n"
-"  %S\t基本塊大小(用於塊計數)\n"
-"  %t\t十六進位類型描述\n"
-"  %T\t可讀性較好的類型描述\n"
+"  %i   檔案系統 ID (十六進位)\n"
+"  %l   檔名最大長度\n"
+"  %n   檔案名稱\n"
+"  %s   區塊大小 (用於快速傳輸)\n"
+"  %S   基礎區塊大小 (用於區塊數)\n"
+"  %t   檔案系統類型 (十六進位)\n"
+"  %T   檔案系統類型 (人類可讀格式)\n"
 
 #: src/stat.c:1601
 #, c-format
@@ -10425,6 +10409,8 @@ msgid ""
 "--terse --file-system is equivalent to the following FORMAT:\n"
 "    %s"
 msgstr ""
+"--terse --file-system 等於以下 <格式>：\n"
+"    %s"
 
 #: src/stdbuf.c:91
 #, c-format
@@ -10465,7 +10451,6 @@ msgstr ""
 "若 MODE 是 \"0\"，則相應的流將不緩衝。\n"
 
 #: src/stdbuf.c:111
-#, fuzzy
 #| msgid ""
 #| "\n"
 #| "Otherwise MODE is a number which may be followed by one of the "
@@ -10485,10 +10470,11 @@ msgid ""
 "size set to MODE bytes.\n"
 msgstr ""
 "\n"
-"否則 MODE 就應該是以下數字單位中的一個：\n"
-"KB 1000，K 1024，MB 1000*1000，M 1024*1024，以及 G、T、P、E、Z、Y。\n"
-"在此情況下，相應的流將緩衝由 MODE 指定大小的緩衝位元組。\n"
-"\n"
+"否則 <模式> 是數字，且可能以下方任一作為結尾：\n"
+"KB 1000, K 1024, MB 1000*1000, M 1024*1024, 以及 G, T, P, E, Z, Y。\n"
+"亦可使用二進位前綴：KiB=K, MiB=M 等等。\n"
+"此情況中，當緩衝區大小設成 <模式> 位元組時，\n"
+"對應的串流將會完全進入緩衝區。\n"
 
 #: src/stdbuf.c:118
 msgid ""
