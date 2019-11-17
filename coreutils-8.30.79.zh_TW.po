@@ -5272,7 +5272,7 @@ msgstr "在區塊定義中出現無效的檔案編號：%s"
 #: src/join.c:930
 #, c-format
 msgid "incompatible join fields %lu, %lu"
-msgstr "不相容的連結區塊%lu，%lu"
+msgstr "不相容的連結區塊 %lu, %lu"
 
 #: src/join.c:1058
 msgid "conflicting empty-field replacement strings"
@@ -10948,10 +10948,10 @@ msgid ""
 "127; special values ^- or undef used to disable special characters.\n"
 msgstr ""
 "\n"
-"處理連結到標準輸入的tty 終端行設定。當不附加參數時，程式會輸出波特率、行約"
+"處理連結到標準輸入的 tty 終端行設定。當不附加參數時，程式會輸出波特率、行約"
 "束\n"
-"規則以及與標準stty 設定間的偏差。在設定中，字元會被逐字讀取或是被編碼為^c、\n"
-"0x37、0177 或127 這樣的字元，其中有特殊值^- 或undef 被用於禁止特殊字元。\n"
+"規則以及與標準 stty 設定間的偏差。在設定中，字元會被逐字讀取或是被編碼為 ^c、\n"
+"0x37、0177 或 127 這樣的字元，其中有特殊值 ^- 或 undef 被用於禁止特殊字元。\n"
 
 #: src/stty.c:1097
 #, c-format
