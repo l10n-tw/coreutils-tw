@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: coreutils 8.30.79\n"
 "Report-Msgid-Bugs-To: bug-coreutils@gnu.org\n"
 "POT-Creation-Date: 2019-03-04 01:47-0800\n"
-"PO-Revision-Date: 2019-11-17 21:44+0800\n"
+"PO-Revision-Date: 2019-11-17 21:50+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <chinese-l10n@googlegroups.com>\n"
 "Language: zh_TW\n"
@@ -12234,7 +12234,7 @@ msgstr "警告：含義不清的八進位內容 \\%c%c%c 已被視作為雙位�
 #: src/tr.c:516
 #, c-format
 msgid "warning: an unescaped backslash at end of string is not portable"
-msgstr "警告：在字串結尾使用為跳脫的反斜線是一種不可移植的做法"
+msgstr "警告：在字串結尾使用為跳脫的反斜線是一種無法移植的做法"
 
 #: src/tr.c:666
 #, fuzzy, c-format
@@ -12554,8 +12554,8 @@ msgid ""
 msgstr ""
 "  -v, --kernel-version     輸出核心版本\n"
 "  -m, --machine            輸出主機的硬體架構名稱\n"
-"  -p, --processor          輸出處理器類型（不可移植）\n"
-"  -i, --hardware-platform  輸出硬體平台或（不可移植）\n"
+"  -p, --processor          輸出處理器類型（無法移植）\n"
+"  -i, --hardware-platform  輸出硬體平台或（無法移植）\n"
 "  -o, --operating-system   輸出作業系統名稱\n"
 
 #: src/uname.c:144
