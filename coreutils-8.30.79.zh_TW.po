@@ -14,9 +14,9 @@ msgstr ""
 "Project-Id-Version: coreutils 8.30.79\n"
 "Report-Msgid-Bugs-To: bug-coreutils@gnu.org\n"
 "POT-Creation-Date: 2019-03-04 01:47-0800\n"
-"PO-Revision-Date: 2019-11-17 19:34+0800\n"
+"PO-Revision-Date: 2019-11-17 21:01+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"Language-Team: Chinese <chinese-l10n@googlegroups.com>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -8908,7 +8908,7 @@ msgid ""
 "If FILE is -, shred standard output.\n"
 msgstr ""
 "\n"
-"如果指定<檔案>是 -，則對標準輸出進行 shred 操作。\n"
+"如果 <檔案> 是 -，則對標準輸出進行 shred 動作。\n"
 
 #: src/shred.c:182
 #, c-format
@@ -8918,13 +8918,12 @@ msgid ""
 "      --random-source=FILE  get random bytes from FILE\n"
 "  -s, --size=N   shred this many bytes (suffixes like K, M, G accepted)\n"
 msgstr ""
-"  -f, --force\t\t必要時修改權限以使目標可寫\n"
-"  -n, --iterations=N\t覆蓋N 次，而非使用預設的%d 次\n"
-"      --random-source=檔案\t從指定檔案中取出隨機位元組\n"
-"  -s, --size=N\t\t粉碎資料為指定位元組的碎片(可使用K、M 和G 作為單位)\n"
+"  -f, --force    必要時變更權限以允許寫入\n"
+"  -n, --iterations=N  覆寫 N 次而非預設次數 (%d)\n"
+"      --random-source=檔案  取得 <檔案> 中的隨機位元組\n"
+"  -s, --size=N   將資料粉碎成指定位元組多個碎片 (接受例如 K、M、G 的後綴)\n"
 
 #: src/shred.c:188
-#, fuzzy
 #| msgid ""
 #| "  -u, --remove   truncate and remove file after overwriting\n"
 #| "  -v, --verbose  show progress\n"
@@ -8939,13 +8938,14 @@ msgid ""
 "                   this is the default for non-regular files\n"
 "  -z, --zero     add a final overwrite with zeros to hide shredding\n"
 msgstr ""
-"  -u, --remove\t\t覆蓋後截斷並刪除檔案\n"
-"  -v, --verbose\t\t顯示詳細訊息\n"
-"  -x, --exact\t\t不將檔案大小增加至最接近的塊大小\n"
-"  -z, --zero \t\t最後一次使用0 進行覆蓋以隱藏覆蓋動作\n"
+"  -u             覆寫後取消配置並移除檔案\n"
+"      --remove[=方式] 類似 -u 但能控制刪除 <方式>；請參閱下方\n"
+"  -v, --verbose  顯示進度\n"
+"  -x, --exact    不要將檔案大小取捨到下個完整區塊；\n"
+"                   這是對非一般檔案的預設值\n"
+"  -z, --zero     最後一次使用 0 覆寫以抹除粉碎痕跡\n"
 
 #: src/shred.c:198
-#, fuzzy
 #| msgid ""
 #| "\n"
 #| "If FILE is -, shred standard output.\n"
@@ -8970,11 +8970,14 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"如果指定檔案為\"-\"，粉碎標準輸出的資料。\n"
-"\n"
-"如果加上--remove (-u)選項表示刪除檔案。預設的方式是不刪除檔案，因為\n"
-"覆蓋像/dev/hda 等的裝置檔案是很普遍的，而這些檔案通常不應刪除。當覆蓋\n"
-"一般檔案時，絕大多數人都會使用--remove 選項。\n"
+"如果指定 --remove (-u) 則會刪除檔案。因為這工具常用在\n"
+"裝置檔案 (例如 /dev/hda) 上，且這些檔案通常不應移除，\n"
+"因此預設值是不移除檔案。\n"
+"選擇性的 <方式> 參數指示了移除目錄項目的方式：\n"
+"'unlink' => 使用標準 unlink 呼叫。\n"
+"'wipe' => 還會先混淆名稱中的位元組。\n"
+"'wipesync' => 還會同步 (sync) 每個混淆位元組至硬碟。\n"
+"預設模式為 'wipesync'，但請注意這會付出許多代價。\n"
 "\n"
 
 #: src/shred.c:210
@@ -8987,9 +8990,9 @@ msgid ""
 "modes:\n"
 "\n"
 msgstr ""
-"警告：請注意使用shred 時有一個很重要的條件：\n"
+"警告：請注意使用 shred 時有一個很重要的條件：\n"
 "檔案系統會在原來的位置覆蓋指定的資料。傳統的檔案系統符合此條件，但許多現代\n"
-"的檔案系統都不符合條件。以下是會令shred 無效或不擔保一定有效的檔案系統的\n"
+"的檔案系統不符合條件。以下是會令 shred 無效或不擔保一定有效的檔案系統的\n"
 "例子：\n"
 "\n"
 
@@ -9004,13 +9007,13 @@ msgid ""
 "* file systems that make snapshots, such as Network Appliance's NFS server\n"
 "\n"
 msgstr ""
-"* 有紀錄結構或是日誌式檔案系統，如AIX 及Solaris 使用的檔案系統 (以及\n"
+"* 有紀錄結構或是日誌式檔案系統，如 AIX 及 Solaris 使用的檔案系統 (以及\n"
 "   JFS、ReiserFS、XFS、Ext3 等)\n"
 "\n"
 "* 會重複寫入資料，及即使一部份寫入動作失敗後仍可繼續的檔案系統，如使用\n"
 "   RAID 的檔案系統\n"
 "\n"
-"* 會不時進行快照記錄的檔案系統，像Network Applicance 的NFS 伺服器\n"
+"* 會不時進行快照記錄的檔案系統，像 Network Applicance 的 NFS 伺服器\n"
 "\n"
 
 #: src/shred.c:228
@@ -9021,9 +9024,9 @@ msgid ""
 "* compressed file systems\n"
 "\n"
 msgstr ""
-"* 檔案系統是存放於快取位置，比如NFS 第三版使用者端\n"
+"* 會在暫存位置快取的檔案系統，比如 NFS 第三版客戶端\n"
 "\n"
-"* 壓縮檔案系統\n"
+"* 壓縮過的檔案系統\n"
 "\n"
 
 #: src/shred.c:235
@@ -9037,12 +9040,11 @@ msgid ""
 "as documented in the mount man page (man mount).\n"
 "\n"
 msgstr ""
-"在Ext3 檔案系統中，以上免責聲明僅適用於啟用了data=journal 模式的情況，\n"
-"此時檔案日誌記錄了附加的中繼資料 shred 的作用將受到影響。在data=ordered(預"
-"設)\n"
-"或data=writeback 模式下shred 仍然有效。\n"
-"Ext3 日誌模式可透過向/etc/fstab 的掛載選項中新增data=something 進行設定，\n"
-"您可以查看mount 的man 頁面以獲得詳細訊息。\n"
+"在 Ext3 檔案系統中，以上免責聲明僅在啟用 data=journal 模式的情況下才適用，\n"
+"此時檔案日誌記錄了附加的中繼資料，而 shred 的作用將受到影響。\n"
+"在 data=ordered (預設) 或 data=writeback 模式下 shred 仍然有效。\n"
+"Ext3 日誌模式可透過向 /etc/fstab 的掛載選項中新增 data=something 來設定，\n"
+"您可以查看 mount 的 man 頁面以得到詳細資訊。\n"
 "\n"
 
 #: src/shred.c:245
@@ -9051,14 +9053,13 @@ msgid ""
 "of the file that cannot be removed, and that will allow a shredded file\n"
 "to be recovered later.\n"
 msgstr ""
-"另外，檔案系統備份和遠端鏡像可能會\n"
-"包含不能被刪除的檔案副本，這將會\n"
-"允許碎片檔案被復原。\n"
+"另外，檔案系統備份和遠端映像站可能會包含不能移除的檔案複本，\n"
+"這將可以還原碎片檔案。\n"
 
 #: src/shred.c:344
 #, c-format
 msgid "%s: fdatasync failed"
-msgstr "%s：fadatsync 失敗"
+msgstr "%s：fdatasync 失敗"
 
 #: src/shred.c:355
 #, c-format
@@ -9068,17 +9069,17 @@ msgstr "%s：fsync 失敗"
 #: src/shred.c:472
 #, c-format
 msgid "%s: cannot rewind"
-msgstr "%s：無法反繞操作"
+msgstr "%s：無法還原動作"
 
 #: src/shred.c:492
 #, c-format
 msgid "%s: pass %lu/%lu (%s)..."
-msgstr "%s：第%lu 次，共%lu 次 (%s)..."
+msgstr "%s：第 %lu 次，共 %lu 次 (%s)..."
 
 #: src/shred.c:543
 #, c-format
 msgid "%s: error writing at offset %s"
-msgstr "%s：在位置%s 寫入時出現錯誤"
+msgstr "%s：在第 %s 個位移寫入時出現錯誤"
 
 #: src/shred.c:564
 #, c-format
@@ -9093,17 +9094,17 @@ msgstr "%s：檔案過大"
 #: src/shred.c:600
 #, c-format
 msgid "%s: pass %lu/%lu (%s)...%s"
-msgstr "%s：第%lu 次，共%lu 次 (%s)...%s"
+msgstr "%s：第 %lu 次，共 %lu 次 (%s)...%s"
 
 #: src/shred.c:616
 #, c-format
 msgid "%s: pass %lu/%lu (%s)...%s/%s %d%%"
-msgstr "%s：第%lu 次，共%lu 次 (%s)...%s/%s %d%%"
+msgstr "%s：第 %lu 次，共 %lu 次 (%s)...%s/%s %d%%"
 
 #: src/shred.c:874
 #, c-format
 msgid "%s: fstat failed"
-msgstr "%s：取得檔案狀態失敗(fstat)"
+msgstr "%s：取得檔案狀態失敗 (fstat)"
 
 #: src/shred.c:885
 #, c-format
@@ -9123,32 +9124,32 @@ msgstr "%s：截斷檔案時發生錯誤"
 #: src/shred.c:1005
 #, c-format
 msgid "%s: fcntl failed"
-msgstr "%s：檔案控制操作失敗(fcntl)"
+msgstr "%s：檔案控制操作失敗 (fcntl)"
 
 #: src/shred.c:1010
 #, c-format
 msgid "%s: cannot shred append-only file descriptor"
-msgstr "%s：不能對只可追加資料的檔案描述符(file descriptor) 進行粉碎"
+msgstr "%s：不能對只可追加資料的檔案描述符 (file descriptor) 進行粉碎"
 
 #: src/shred.c:1093
 #, c-format
 msgid "%s: removing"
-msgstr "%s：正在刪除"
+msgstr "%s：正在移除"
 
 #: src/shred.c:1118
 #, c-format
 msgid "%s: renamed to %s"
-msgstr "%s：名稱已變更為 %s"
+msgstr "%s：已重命名至 %s"
 
 #: src/shred.c:1127
 #, c-format
 msgid "%s: failed to remove"
-msgstr "%s：刪除失敗"
+msgstr "%s：移除失敗"
 
 #: src/shred.c:1131
 #, c-format
 msgid "%s: removed"
-msgstr "%s：已刪除"
+msgstr "%s：已移除"
 
 #: src/shred.c:1138 src/shred.c:1181
 #, c-format
@@ -9158,7 +9159,7 @@ msgstr "%s：無法關閉"
 #: src/shred.c:1174
 #, c-format
 msgid "%s: failed to open for writing"
-msgstr "%s：無法以寫模式開啟"
+msgstr "%s：無法以寫入模式開啟"
 
 #: src/shred.c:1237
 msgid "invalid number of passes"
@@ -9166,7 +9167,7 @@ msgstr "覆蓋次數無效"
 
 #: src/shred.c:1242 src/shuf.c:462 src/sort.c:4512
 msgid "multiple random sources specified"
-msgstr "指定了多個隨機源"
+msgstr "指定了多個隨機來源"
 
 #: src/shred.c:1256
 msgid "invalid file size"
@@ -9229,7 +9230,7 @@ msgstr "指定了多個輸出檔案"
 #: src/shuf.c:486
 #, c-format
 msgid "cannot combine -e and -i options"
-msgstr "不能同時指定-e 和-i 選項"
+msgstr "不能同時指定 -e 和 -i 選項"
 
 #: src/shuf.c:570
 msgid "no lines to repeat"
@@ -9256,7 +9257,7 @@ msgstr ""
 #: src/sleep.c:132 src/timeout.c:332
 #, c-format
 msgid "invalid time interval %s"
-msgstr "無效的時間間隔%s"
+msgstr "無效的時間間隔 %s"
 
 #: src/sleep.c:143 src/tail.c:1311
 msgid "cannot read realtime clock"
