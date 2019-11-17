@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: coreutils 8.30.79\n"
 "Report-Msgid-Bugs-To: bug-coreutils@gnu.org\n"
 "POT-Creation-Date: 2019-03-04 01:47-0800\n"
-"PO-Revision-Date: 2019-10-12 23:49+0800\n"
+"PO-Revision-Date: 2019-11-17 19:15+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -23,9 +23,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.08.2\n"
-"X-ZhConverter: 繁化姬 dict-fa3f548e-r876 @ 2019/07/17 13:29:50 | https://"
-"zhconvert.org\n"
+"X-Generator: Lokalize 19.08.3\n"
+"X-ZhConverter: 繁化姬 dict-fa3f548e-r876 @ 2019/07/17 13:29:50 |"
+" https://zhconvert.org\n"
 
 #: lib/argmatch.c:134
 #, c-format
@@ -966,8 +966,7 @@ msgstr "      --base64          與 'base64' 程式相同（RFC4648 section 4）
 
 #: src/basenc.c:121
 msgid "      --base64url       file- and url-safe base64 (RFC4648 section 5)\n"
-msgstr ""
-"      --base64url       檔案安全或者 URL 安全的 base64（RFC4648 section 5）\n"
+msgstr "      --base64url       檔案安全或者 URL 安全的 base64（RFC4648 section 5）\n"
 
 #: src/basenc.c:124
 msgid "      --base32          same as 'base32' program (RFC4648 section 6)\n"
@@ -1682,8 +1681,7 @@ msgstr ""
 
 #: src/chroot.c:199
 msgid "  --userspec=USER:GROUP  specify user and group (ID or name) to use\n"
-msgstr ""
-"  --userspec=使用者:群組      指定使用者及使用者群組（可使用編號或名稱）\n"
+msgstr "  --userspec=使用者:群組      指定使用者及使用者群組（可使用編號或名稱）\n"
 
 #: src/chroot.c:202
 #, c-format
@@ -2453,8 +2451,7 @@ msgstr "在 %s 後缺少了要操作的目標檔案"
 
 #: src/cp.c:617 src/install.c:981 src/mv.c:447
 msgid "cannot combine --target-directory (-t) and --no-target-directory (-T)"
-msgstr ""
-"無法同時使用 --target-directory (-t) 和 --no-target-directory (-T) 選項"
+msgstr "無法同時使用 --target-directory (-t) 和 --no-target-directory (-T) 選項"
 
 #: src/cp.c:635 src/cp.c:1090 src/install.c:409 src/install.c:945
 #: src/install.c:994 src/ln.c:539 src/mv.c:396 src/mv.c:468
@@ -2810,8 +2807,7 @@ msgstr "以指定 <格式> 字串的形式顯示目前時間，或者設定系�
 #: src/date.c:141
 msgid ""
 "  -d, --date=STRING          display time described by STRING, not 'now'\n"
-msgstr ""
-"  -d, --date=字串          顯示指定 <字串> 描述的時間，而非「目前時間」\n"
+msgstr "  -d, --date=字串          顯示指定 <字串> 描述的時間，而非「目前時間」\n"
 
 #: src/date.c:144
 msgid ""
@@ -2825,8 +2821,7 @@ msgstr ""
 #: src/date.c:148
 msgid ""
 "  -f, --file=DATEFILE        like --date; once for each line of DATEFILE\n"
-msgstr ""
-"  -f, --file=日期檔案        類似 --date；使用指定<日期檔案>，一次處理一行\n"
+msgstr "  -f, --file=日期檔案        類似 --date；使用指定<日期檔案>，一次處理一行\n"
 
 #: src/date.c:151
 msgid ""
@@ -4637,8 +4632,7 @@ msgstr "無效的寬度"
 
 #: src/fold.c:70
 msgid "Wrap input lines in each FILE, writing to standard output.\n"
-msgstr ""
-"對每個指定的檔案設定自動換行（折行），並將重新排版後的結果輸出到標準輸出。\n"
+msgstr "對每個指定的檔案設定自動換行（折行），並將重新排版後的結果輸出到標準輸出。\n"
 
 #: src/fold.c:77
 msgid ""
@@ -5129,8 +5123,7 @@ msgstr "無法清除 %s 的連結（unlink 失敗）"
 #, c-format
 msgid ""
 "WARNING: ignoring --preserve-context; this kernel is not SELinux-enabled"
-msgstr ""
-"警告：忽略 --preserve-context 參數；目前執行的核心沒有啟用 SELinux 支援"
+msgstr "警告：忽略 --preserve-context 參數；目前執行的核心沒有啟用 SELinux 支援"
 
 #: src/install.c:932
 msgid "the strip option may not be used when installing a directory"
@@ -6278,7 +6271,7 @@ msgid ""
 "  -p, --parents     no error if existing, make parent directories as needed\n"
 "  -v, --verbose     print a message for each created directory\n"
 msgstr ""
-"  -m, --mode=模式   設定權限模式（類似chmod），而不是 a=rwx 減 umask\n"
+"  -m, --mode=模式   設定權限模式（類似 chmod），而不是 a=rwx 減 umask\n"
 "  -p, --parents     需要時建立目標目錄的上層目錄，但即使這些目錄已存在\n"
 "                      也不當作錯誤處理\n"
 "  -v, --verbose     每次建立新目錄都顯示訊息\n"
@@ -6319,8 +6312,7 @@ msgstr "以指定的<名稱>建立命名管道（FIFO）。\n"
 #: src/mkfifo.c:61 src/mknod.c:63
 msgid ""
 "  -m, --mode=MODE    set file permission bits to MODE, not a=rw - umask\n"
-msgstr ""
-"  -m, --mode=模式   \t設定權限模式(類似chmod)，而不是rwxrwxrwx 減umask\n"
+msgstr "  -m, --mode=模式    設定權限模式(類似 chmod)，而不是 rwxrwxrwx 減 umask\n"
 
 #: src/mkfifo.c:64 src/mknod.c:66
 msgid ""
@@ -6549,7 +6541,7 @@ msgstr ""
 "  -f, --force                  覆蓋前不詢問\n"
 "  -i, --interactive            覆蓋前詢問\n"
 "  -n, --no-clobber             不覆蓋已存在檔案\n"
-"如果您指定了-i、-f、-n 中的多個，僅最後一個生效。\n"
+"如果您指定了 -i、-f、-n 中的多個，僅最後一個生效。\n"
 
 #: src/mv.c:313
 msgid ""
@@ -7006,8 +6998,7 @@ msgstr ""
 #: src/numfmt.c:939
 msgid ""
 "      --to=UNIT        auto-scale output numbers to UNITs; see UNIT below\n"
-msgstr ""
-"      --to=單位        自動將輸出數字進位至 <單位>；請參閱下方〈單位〉部份\n"
+msgstr "      --to=單位        自動將輸出數字進位至 <單位>；請參閱下方〈單位〉部份\n"
 
 #: src/numfmt.c:942
 msgid ""
@@ -8524,8 +8515,7 @@ msgid ""
 "                          always (-i); without WHEN, prompt always\n"
 msgstr ""
 "  -I                    當在遞迴移除多於 3 個檔案前提示一次；\n"
-"                          不會和 -i 一樣如此煩人，但仍能保護大部分"
-"的                          失誤行為\n"
+"                          不會和 -i 一樣如此煩人，但仍能保護大部分的失誤行為\n"
 "      --interactive[=WHEN]  根據 WHEN 提示：never, once (-I) 或 always (-"
 "i)；\n"
 "                          如果沒指定 WHEN，則使用 always\n"
@@ -8569,7 +8559,7 @@ msgid ""
 "contents.\n"
 msgstr ""
 "\n"
-"預設時，rm 不會刪除目錄。使用--recursive(-r 或-R)選項可刪除每個指定\n"
+"預設時，rm 不會刪除目錄。使用 --recursive (-r 或 -R) 選項可刪除每個指定\n"
 "的目錄，以及其下所有的內容。\n"
 
 #: src/rm.c:170
@@ -8597,8 +8587,8 @@ msgid ""
 "assurance that the contents are truly unrecoverable, consider using shred.\n"
 msgstr ""
 "\n"
-"請注意，如果使用rm 來刪除檔案，通常仍可以將該檔案復原原狀。如果想保證\n"
-"該檔案的內容無法還原，請考慮使用shred。\n"
+"請注意，如果使用 rm 來刪除檔案，通常仍可以將該檔案復原原狀。如果想保證\n"
+"該檔案的內容無法還原，請考慮使用 shred。\n"
 
 #: src/rm.c:297
 msgid "you may not abbreviate the --no-preserve-root option"
@@ -9969,8 +9959,7 @@ msgstr ""
 #. 'stat --help' without --file-system, and NOT from printf.
 #: src/stat.c:1466
 msgid "Device: %Dh/%dd\tInode: %-10i  Links: %-5h Device type: %t,%T\n"
-msgstr ""
-"裝置：%Dh/%dd\tInode：%-10i  實際連結 (hardlink) ：%-5h 裝置類型：%t,%T\n"
+msgstr "裝置：%Dh/%dd\tInode：%-10i  實際連結 (hardlink) ：%-5h 裝置類型：%t,%T\n"
 
 #. TRANSLATORS: This string uses format specifiers from
 #. 'stat --help' without --file-system, and NOT from printf.
@@ -11110,7 +11099,7 @@ msgid ""
 "With no FILE, or when FILE is -, read standard input.\n"
 msgstr ""
 "\n"
-"如果沒有指定檔案，或者檔案為\"-\"，則從標準輸入讀取。\n"
+"如果沒有指定檔案，或者檔案為 \"-\"，則從標準輸入讀取。\n"
 
 #: src/system.h:587
 msgid ""
@@ -11177,7 +11166,7 @@ msgid ""
 "%s online help: <%s>\n"
 msgstr ""
 "\n"
-"%s 線上幫助：<%s>\n"
+"%s 線上說明：<%s>\n"
 
 #. TRANSLATORS: Replace LANG_CODE in this URL with your language code
 #. <https://translationproject.org/team/LANG_CODE.html> to form one of
@@ -11185,8 +11174,7 @@ msgstr ""
 #. the entire URL with your translation team's email address.
 #: src/system.h:663
 msgid "Report any translation bugs to <https://translationproject.org/team/>\n"
-msgstr ""
-"請向 <http://translationproject.org/team/zh_TW.html> 報告任何翻譯錯誤\n"
+msgstr "請向 <http://translationproject.org/team/zh_TW.html> 回報任何翻譯錯誤\n"
 
 #: src/system.h:666
 #, c-format
@@ -12237,8 +12225,7 @@ msgstr ""
 msgid ""
 "warning: the ambiguous octal escape \\%c%c%c is being\n"
 "\tinterpreted as the 2-byte sequence \\0%c%c, %c"
-msgstr ""
-"警告：含義不清的八進位內容 \\%c%c%c 已被視作為雙位元組序列 \\0%c%c, %c 處理"
+msgstr "警告：含義不清的八進位內容 \\%c%c%c 已被視作為雙位元組序列 \\0%c%c, %c 處理"
 
 #: src/tr.c:516
 #, c-format
@@ -12837,7 +12824,7 @@ msgstr ""
 "\n"
 "輸出每個指定檔案的行數、單詞計數和位元組數，如果指定了\n"
 "多於一個檔案，繼續給出所有相關資料的總計。如果沒有指定\n"
-"檔案，或者檔案為\"-\"，則從標準輸入讀取資料。\n"
+"檔案，或者檔案為 \"-\"，則從標準輸入讀取資料。\n"
 "  -c, --bytes\t\t輸出位元組數統計\n"
 "  -m, --chars\t\t輸出字元數統計\n"
 "  -l, --lines\t\t輸出行數統計\n"
