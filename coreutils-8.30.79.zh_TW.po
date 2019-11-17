@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: coreutils 8.30.79\n"
 "Report-Msgid-Bugs-To: bug-coreutils@gnu.org\n"
 "POT-Creation-Date: 2019-03-04 01:47-0800\n"
-"PO-Revision-Date: 2019-11-17 21:01+0800\n"
+"PO-Revision-Date: 2019-11-17 21:02+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <chinese-l10n@googlegroups.com>\n"
 "Language: zh_TW\n"
@@ -2317,7 +2317,7 @@ msgid ""
 "force)\n"
 msgstr ""
 "  -R, -r, --recursive\t\t遞迴複製目錄及其子目錄內的所有內容\n"
-"      --reflink[=WHEN]\t\t控制複製/CoW 副本。請參閱下方。\n"
+"      --reflink[=WHEN]\t\t控制複製/CoW 複本。請參閱下方。\n"
 "      --remove-destination\t嘗試開啟目標檔案前先刪除已存在的目的地\n"
 "\t\t\t\t\t檔案 (相對於 --force 選項)\n"
 
@@ -2502,7 +2502,7 @@ msgstr "無法在未啟用 SELinux 支援的核心上儲存安全上下文"
 
 #: src/cp.c:1210
 msgid "cannot preserve extended attributes, cp is built without xattr support"
-msgstr "無法保留擴充屬性，目前使用的 cp 副本編譯時沒有啟用 xattr 支援"
+msgstr "無法保留擴充屬性，目前使用的 cp 複本編譯時沒有啟用 xattr 支援"
 
 #. This is a proper name. See the gettext manual, section Names.
 #: src/csplit.c:44 src/dd.c:46
