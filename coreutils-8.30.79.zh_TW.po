@@ -24,6 +24,7 @@ msgstr ""
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 19.08.3\n"
+"X-ZhConverter: 繁化姬 dict-8bb0c6c3-r910 @ 2019/11/17 22:13:09 | https://zhconvert.org\n"
 "X-ZhConverter: 繁化姬 dict-fa3f548e-r876 @ 2019/07/17 13:29:50 |"
 " https://zhconvert.org\n"
 
@@ -1092,7 +1093,7 @@ msgstr "用法：%s [選項]... [檔案]...\n"
 
 #: src/cat.c:92
 msgid "Concatenate FILE(s) to standard output.\n"
-msgstr "連接所有指定檔案並將結果寫到標準輸出。\n"
+msgstr "連結所有指定檔案並將結果寫到標準輸出。\n"
 
 #: src/cat.c:98
 msgid ""
@@ -3911,7 +3912,7 @@ msgid ""
 msgstr ""
 "  -k                    等效於 --block-size=1K\n"
 "  -L, --dereference     解引用所有符號連結\n"
-"  -l, --count-links     如果是硬連接，則重複計算其尺寸\n"
+"  -l, --count-links     如果是硬連結，則重複計算其尺寸\n"
 "  -m                    等效於 --block-size=1M\n"
 
 #: src/du.c:331
@@ -5271,7 +5272,7 @@ msgstr "在區塊定義中出現無效的檔案編號：%s"
 #: src/join.c:930
 #, c-format
 msgid "incompatible join fields %lu, %lu"
-msgstr "不相容的連接區塊%lu，%lu"
+msgstr "不相容的連結區塊%lu，%lu"
 
 #: src/join.c:1058
 msgid "conflicting empty-field replacement strings"
@@ -7743,8 +7744,8 @@ msgid ""
 msgstr ""
 "  -f\t在短格式中省略列欄報頭\n"
 "  -w\t在短格式中省略使用者全名\n"
-"  -i\t在短格式中省略使用者全名以及遠程主機\n"
-"  -q\t在短格式中省略使用者全名、遠程主機以及空閒時間\n"
+"  -i\t在短格式中省略使用者全名以及遠端主機\n"
+"  -q\t在短格式中省略使用者全名、遠端主機以及空閒時間\n"
 
 #: src/pinky.c:507
 #, c-format
@@ -9023,7 +9024,7 @@ msgid ""
 "* compressed file systems\n"
 "\n"
 msgstr ""
-"* 會在暫存位置快取的檔案系統，比如 NFS 第三版客戶端\n"
+"* 會在暫存位置快取的檔案系統，比如 NFS 第三版用戶端\n"
 "\n"
 "* 壓縮過的檔案系統\n"
 "\n"
@@ -9138,7 +9139,7 @@ msgstr "%s：正在移除"
 #: src/shred.c:1118
 #, c-format
 msgid "%s: renamed to %s"
-msgstr "%s：已重命名至 %s"
+msgstr "%s：已重新命名至 %s"
 
 #: src/shred.c:1127
 #, c-format
@@ -9722,7 +9723,7 @@ msgstr ""
 "      --hex-suffixes[=FROM]  跟 -x 相同，但能設定開始值\n"
 "  -e, --elide-empty-files  不使用 '-n' 產生空的輸出檔\n"
 "      --filter=指令       寫入 shell <指令>，檔名是 $FILE\n"
-"  -l, --lines=NUMBER      給每個輸出檔放入 NUMBER 行 / 條記錄\n"
+"  -l, --lines=NUMBER      給每個輸出檔放入 NUMBER 行 / 條紀錄\n"
 "  -n, --number=CHUNKS     產生 CHUNKS 個輸出檔；請參閱下方的解釋。\n"
 "  -t, --separator=分隔符  使用 <分隔符> 作為記錄分隔符而非換行符號；\n"
 "                            '\\0' (零) 會指定 NUL 字元\n"
@@ -9813,7 +9814,7 @@ msgstr "正在等待子執行程序"
 #: src/split.c:571
 #, c-format
 msgid "with FILE=%s, signal %s from command: %s"
-msgstr "使用 FILE(檔案)=%s，下述指令傳送 %s 信號：%s"
+msgstr "使用 FILE(檔案)=%s，下述指令傳送 %s 訊號：%s"
 
 #: src/split.c:579
 #, c-format
@@ -10947,7 +10948,7 @@ msgid ""
 "127; special values ^- or undef used to disable special characters.\n"
 msgstr ""
 "\n"
-"處理連接到標準輸入的tty 終端行設定。當不附加參數時，程式會輸出波特率、行約"
+"處理連結到標準輸入的tty 終端行設定。當不附加參數時，程式會輸出波特率、行約"
 "束\n"
 "規則以及與標準stty 設定間的偏差。在設定中，字元會被逐字讀取或是被編碼為^c、\n"
 "0x37、0177 或127 這樣的字元，其中有特殊值^- 或undef 被用於禁止特殊字元。\n"
@@ -11436,7 +11437,7 @@ msgstr "；放棄處理該名稱"
 #: src/tail.c:1048
 #, c-format
 msgid "%s has been replaced with an untailable remote file"
-msgstr "%s 已被取代為 tail 無法處理的遠程檔案"
+msgstr "%s 已被取代為 tail 無法處理的遠端檔案"
 
 #: src/tail.c:1069
 #, c-format
@@ -12518,7 +12519,7 @@ msgid ""
 "\n"
 "  -s, --silent, --quiet   print nothing, only return an exit status\n"
 msgstr ""
-"顯示出連接到目前標準輸入的終端裝置檔名。\n"
+"顯示出連結到目前標準輸入的終端裝置檔名。\n"
 "\n"
 "  -s, --silent, --quiet\t什麼也不顯示，只返回退出狀態值\n"
 
