@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: coreutils 8.30.79\n"
 "Report-Msgid-Bugs-To: bug-coreutils@gnu.org\n"
 "POT-Creation-Date: 2019-03-04 01:47-0800\n"
-"PO-Revision-Date: 2019-11-17 21:02+0800\n"
+"PO-Revision-Date: 2019-11-17 21:25+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <chinese-l10n@googlegroups.com>\n"
 "Language: zh_TW\n"
@@ -11013,7 +11013,7 @@ msgstr "Kayvan Aghaiepour"
 
 #: src/sum.c:63
 msgid "Print checksum and block counts for each FILE.\n"
-msgstr "輸出每個指定檔案的總和檢查碼和塊計數。\n"
+msgstr "輸出每個指定檔案的總和檢查碼和區塊數。\n"
 
 #: src/sum.c:69
 msgid ""
@@ -11022,8 +11022,8 @@ msgid ""
 "  -s, --sysv      use System V sum algorithm, use 512 bytes blocks\n"
 msgstr ""
 "\n"
-"  -r              使用 BSD 加和演算法，以1 KB 為一個塊\n"
-"  -s, --sysv      使用System V 加和演算法，以512位元組為一個塊\n"
+"  -r              使用 BSD 加和演算法，以 1 KB 為一個區塊\n"
+"  -s, --sysv      使用 System V 加和演算法，以 512 位元組為一個區塊\n"
 
 #: src/sync.c:64
 #, c-format
@@ -11038,7 +11038,7 @@ msgid ""
 "or their containing file systems.\n"
 "\n"
 msgstr ""
-"將快取資料寫入持久存儲裝置中\n"
+"將快取資料寫入持久儲存裝置中\n"
 "\n"
 "如果指定了一個或多個檔案，則只同步這些檔案（或包含它們的檔案系統）。\n"
 "\n"
@@ -11083,16 +11083,16 @@ msgid ""
 "for details about the options it supports.\n"
 msgstr ""
 "\n"
-"注意：您的shell 可能內建了自己的%s 程式版本，它會覆蓋這裡所提及的相應\n"
-"版本。請查閱您的shell 檔案獲知它所支援的選項。\n"
+"注意：您的 shell 可能內建了自己的 %s 程式版本，它會覆蓋這裡所提及的相應\n"
+"版本。請查閱您的 shell 檔案以得知其所支援的選項。\n"
 
 #: src/system.h:350
 msgid "      --help     display this help and exit\n"
-msgstr "      --help\t\t顯示此說明訊息並退出\n"
+msgstr "      --help     顯示此說明訊息並退出\n"
 
 #: src/system.h:352
 msgid "      --version  output version information and exit\n"
-msgstr "      --version\t\t顯示版本訊息並退出\n"
+msgstr "      --version  顯示版本訊息並退出\n"
 
 #: src/system.h:580
 msgid ""
@@ -11100,7 +11100,7 @@ msgid ""
 "With no FILE, or when FILE is -, read standard input.\n"
 msgstr ""
 "\n"
-"如果沒有指定檔案，或者檔案為 \"-\"，則從標準輸入讀取。\n"
+"如果沒有指定檔案，或者檔案為「-」，則從標準輸入讀取。\n"
 
 #: src/system.h:587
 msgid ""
@@ -11108,7 +11108,7 @@ msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
 msgstr ""
 "\n"
-"必選參數對長短選項同時適用。\n"
+"必要參數對長短選項皆適用。\n"
 
 #: src/system.h:595
 msgid ""
@@ -11133,8 +11133,8 @@ msgid ""
 msgstr ""
 "\n"
 "所顯示的數值是來自 --block-size、%s_BLOCK_SIZE、BLOCK_SIZE \n"
-"及 BLOCKSIZE 環境變數中第一個可用的 SIZE 單位。\n"
-"否則，預設單位是 1024 位元組(或是 512，若設定 POSIXLY_CORRECT 的話)。\n"
+"及 BLOCKSIZE 環境變數中第一個可用的 <大小> 單位。\n"
+"否則，預設單位是 1024 位元組 (或是 512，若設定 POSIXLY_CORRECT 的話)。\n"
 
 #: src/system.h:615
 msgid ""
@@ -11146,8 +11146,8 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"備份檔案的後綴為\"~\"，除非以--suffix 選項或是 SIMPLE_BACKUP_SUFFIX\n"
-"環境變數指定。版本控制的方式可透過--backup 選項或 VERSION_CONTROL 環境\n"
+"備份檔案的後綴為「~」，除非以 --suffix 選項或是 SIMPLE_BACKUP_SUFFIX\n"
+"環境變數指定。版本控制的方式可透過 --backup 選項或 VERSION_CONTROL 環境\n"
 "變數來選擇。以下是可用的變數值：\n"
 "\n"
 
@@ -11158,11 +11158,11 @@ msgid ""
 "  existing, nil   numbered if numbered backups exist, simple otherwise\n"
 "  simple, never   always make simple backups\n"
 msgstr ""
-"  none, off       不進行備份(即使使用了--backup 選項)\n"
+"  none, off       不進行備份 (即使使用了--backup 選項)\n"
 "  numbered, t     備份檔案加上數字進行排序\n"
 "  existing, nil   若有數字的備份檔案已經存在則使用數字，否則使用普通方式備"
 "份\n"
-"  simple, never   永遠使用普通方式備份\n"
+"  simple, never   永遠使用簡易方式建立備份\n"
 
 #: src/system.h:652
 #, c-format
@@ -11179,7 +11179,7 @@ msgstr ""
 #. the entire URL with your translation team's email address.
 #: src/system.h:663
 msgid "Report any translation bugs to <https://translationproject.org/team/>\n"
-msgstr "請向 <http://translationproject.org/team/zh_TW.html> 回報任何翻譯錯誤\n"
+msgstr "請向 <http://translationproject.org/team/zh_TW.html> 回報翻譯錯誤\n"
 
 #: src/system.h:666
 #, c-format
@@ -11194,7 +11194,7 @@ msgstr "或者在本機使用：info '(coreutils) %s%s'\n"
 #: src/system.h:679
 #, c-format
 msgid "Try '%s --help' for more information.\n"
-msgstr "請嘗試執行 \"%s --help\" 來取得更多訊息。\n"
+msgstr "請嘗試執行「%s --help」取得更多訊息。\n"
 
 #: src/system.h:723
 #, c-format
@@ -11207,7 +11207,7 @@ msgid ""
 msgstr ""
 "警告：發現循環的目錄架構。\n"
 "這幾乎可以肯定檔案系統已經損壞。\n"
-"** 請通知系統管理員。**\n"
+"** 請通知系統管理員 **\n"
 "以下的目錄是循環的一部份：\n"
 "  %s\n"
 
