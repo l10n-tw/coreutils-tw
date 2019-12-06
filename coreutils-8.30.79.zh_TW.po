@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: coreutils 8.30.79\n"
 "Report-Msgid-Bugs-To: bug-coreutils@gnu.org\n"
 "POT-Creation-Date: 2019-03-04 01:47-0800\n"
-"PO-Revision-Date: 2019-11-17 21:52+0800\n"
+"PO-Revision-Date: 2019-12-06 23:42+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -42,6 +42,14 @@ msgstr "傳入 %2$s 之參數 %1$s 不明確"
 msgid "Valid arguments are:"
 msgstr "有效的參數為："
 
+#: lib/argp-help.c:1889 lib/error.c:195
+msgid "Unknown system error"
+msgstr "未知系統錯誤"
+
+#: lib/argp-parse.c:83 src/who.c:563
+msgid "NAME"
+msgstr "名稱"
+
 #: lib/closein.c:100
 msgid "error closing file"
 msgstr "關閉檔案時發生錯誤"
@@ -58,14 +66,25 @@ msgstr "關閉檔案時發生錯誤"
 msgid "write error"
 msgstr "寫入時發生錯誤"
 
-#: lib/copy-acl.c:54 src/copy.c:1393 src/copy.c:2909
+#: lib/copy-acl.c:54 lib/copy-file.c:198 src/copy.c:1393 src/copy.c:2909
 #, c-format
 msgid "preserving permissions for %s"
 msgstr "正在保留 %s 的權限"
 
-#: lib/error.c:195
-msgid "Unknown system error"
-msgstr "未知系統錯誤"
+#: lib/copy-file.c:183 src/copy.c:242 src/dd.c:1859 src/dd.c:2195 src/du.c:1133
+#: src/head.c:157 src/head.c:308 src/head.c:390 src/head.c:586 src/head.c:668
+#: src/head.c:737 src/head.c:787 src/head.c:810 src/tail.c:464 src/tail.c:557
+#: src/tail.c:606 src/tail.c:699 src/tail.c:827 src/tail.c:875 src/tail.c:912
+#: src/tail.c:2037 src/tail.c:2070 src/uniq.c:473
+#, c-format
+msgid "error reading %s"
+msgstr "讀取 %s 時發生錯誤"
+
+#: lib/copy-file.c:187 src/copy.c:275 src/dd.c:2258 src/dd.c:2320
+#: src/head.c:185 src/tail.c:438
+#, c-format
+msgid "error writing %s"
+msgstr "寫入 %s 時發生錯誤"
 
 #: lib/file-type.c:40
 msgid "regular empty file"
@@ -153,7 +172,7 @@ msgstr "連線埠"
 
 #: lib/file-type.c:105
 msgid "socket"
-msgstr "通訊端 (socket)"
+msgstr "socket"
 
 #: lib/file-type.c:108
 msgid "whiteout"
@@ -229,7 +248,7 @@ msgstr "所有請求完成"
 
 #: lib/gai_strerror.c:74
 msgid "Interrupted by a signal"
-msgstr "遭訊號中止"
+msgstr "遭信號中止"
 
 #: lib/gai_strerror.c:75
 msgid "Parameter string not correctly encoded"
@@ -291,8 +310,8 @@ msgstr "無法變更 %s 的權限"
 msgid "cannot create directory %s"
 msgstr "無法建立 %s 目錄"
 
-#: lib/obstack.c:338 lib/obstack.c:340 lib/xalloc-die.c:34 src/csplit.c:233
-#: src/tac.c:442
+#: lib/obstack.c:338 lib/obstack.c:340 lib/xalloc-die.c:34 lib/xsetenv.c:37
+#: src/csplit.c:233 src/tac.c:442
 #, c-format
 msgid "memory exhausted"
 msgstr "記憶體用盡"
@@ -335,17 +354,6 @@ msgstr "「"
 #: lib/quotearg.c:363
 msgid "'"
 msgstr "」"
-
-#: lib/randread.c:128
-#, c-format
-msgid "%s: end of file"
-msgstr "%s：檔案結束"
-
-#: lib/randread.c:128 src/du.c:1073 src/md5sum.c:803 src/od.c:953 src/tac.c:251
-#: src/tac.c:357 src/tac.c:515 src/tac.c:596 src/wc.c:824
-#, c-format
-msgid "%s: read error"
-msgstr "%s：讀取發生錯誤"
 
 #: lib/regcomp.c:135
 msgid "Success"
@@ -419,21 +427,6 @@ msgstr "不對稱的 ) 或 \\)"
 msgid "No previous regular expression"
 msgstr "沒有上一個正規表示式"
 
-#: lib/root-dev-ino.h:37
-#, c-format
-msgid "it is dangerous to operate recursively on %s"
-msgstr "在 %s 進行遞迴操作十分危險"
-
-#: lib/root-dev-ino.h:41
-#, c-format
-msgid "it is dangerous to operate recursively on %s (same as %s)"
-msgstr "在 %s 進行遞迴操作十分危險 (與 %s 相同)"
-
-#: lib/root-dev-ino.h:43
-#, c-format
-msgid "use --no-preserve-root to override this failsafe"
-msgstr "使用 --no-preserve-root 選項跳過安全模式"
-
 #. TRANSLATORS: A regular expression testing for an affirmative answer
 #. (english: "yes").  Testing the first character may be sufficient.
 #. Take care to consider upper and lower case.
@@ -497,7 +490,7 @@ msgstr "匯流排錯誤"
 
 #: lib/siglist.h:58
 msgid "Segmentation fault"
-msgstr "分割錯誤"
+msgstr "程式記憶體區段錯誤"
 
 #: lib/siglist.h:61
 msgid "Broken pipe"
@@ -517,7 +510,7 @@ msgstr "緊急 I/O 條件"
 
 #: lib/siglist.h:73
 msgid "Stopped (signal)"
-msgstr "停止（訊號）"
+msgstr "停止（信號）"
 
 #: lib/siglist.h:76
 msgid "Stopped"
@@ -565,11 +558,11 @@ msgstr "已變更視窗"
 
 #: lib/siglist.h:109
 msgid "User defined signal 1"
-msgstr "使用者定義訊號 1"
+msgstr "使用者定義信號 1"
 
 #: lib/siglist.h:112
 msgid "User defined signal 2"
-msgstr "使用者定義訊號 2"
+msgstr "使用者定義信號 2"
 
 #: lib/siglist.h:117
 msgid "EMT trap"
@@ -598,12 +591,12 @@ msgstr "資源遺失"
 #: lib/strsignal.c:114
 #, c-format
 msgid "Real-time signal %d"
-msgstr "即時訊號 %d"
+msgstr "即時信號 %d"
 
 #: lib/strsignal.c:118
 #, c-format
 msgid "Unknown signal %d"
-msgstr "未知訊號 %d"
+msgstr "未知信號 %d"
 
 #: lib/unicodeio.c:102
 msgid "iconv function not usable"
@@ -661,36 +654,20 @@ msgstr "由 %s 打包\n"
 msgid "(C)"
 msgstr "(C)"
 
-#: lib/version-etc.c:85
-msgid ""
-"\n"
-"License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl."
-"html>.\n"
-"This is free software: you are free to change and redistribute it.\n"
-"There is NO WARRANTY, to the extent permitted by law.\n"
-"\n"
-msgstr ""
-"\n"
-"授權條款 GPLv3+：GNU 通用公共授權條款第 3 版或更新版本 <https://gnu.org/"
-"licenses/gpl.html>。\n"
-"本軟體是自由軟體：您可以自由修改和重新發布它。\n"
-"在法律範圍內沒有其他保證。\n"
-"\n"
-
 #. TRANSLATORS: %s denotes an author name.
-#: lib/version-etc.c:102
+#: lib/version-etc.c:105 lib/version-etc.c:102
 #, c-format
 msgid "Written by %s.\n"
 msgstr "由 %s 編寫。\n"
 
 #. TRANSLATORS: Each %s denotes an author name.
-#: lib/version-etc.c:106
+#: lib/version-etc.c:109 lib/version-etc.c:106
 #, c-format
 msgid "Written by %s and %s.\n"
 msgstr "由 %s 和 %s 編寫。\n"
 
 #. TRANSLATORS: Each %s denotes an author name.
-#: lib/version-etc.c:110
+#: lib/version-etc.c:113 lib/version-etc.c:110
 #, c-format
 msgid "Written by %s, %s, and %s.\n"
 msgstr "由 %s、%s 和 %s 編寫。\n"
@@ -698,7 +675,7 @@ msgstr "由 %s、%s 和 %s 編寫。\n"
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:117
+#: lib/version-etc.c:120 lib/version-etc.c:117
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -710,7 +687,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:124
+#: lib/version-etc.c:127 lib/version-etc.c:124
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -722,7 +699,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:131
+#: lib/version-etc.c:134 lib/version-etc.c:131
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -734,7 +711,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:139
+#: lib/version-etc.c:142 lib/version-etc.c:139
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -746,7 +723,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:147
+#: lib/version-etc.c:150 lib/version-etc.c:147
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -759,7 +736,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:156
+#: lib/version-etc.c:159 lib/version-etc.c:156
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -773,7 +750,7 @@ msgstr ""
 #. TRANSLATORS: Each %s denotes an author name.
 #. You can use line breaks, estimating that each author name occupies
 #. ca. 16 screen columns and that a screen line has ca. 80 columns.
-#: lib/version-etc.c:167
+#: lib/version-etc.c:170 lib/version-etc.c:167
 #, c-format
 msgid ""
 "Written by %s, %s, %s,\n"
@@ -784,42 +761,41 @@ msgstr ""
 "%s、%s、%s、%s\n"
 "和 %s 等人編寫。\n"
 
-#. TRANSLATORS: The placeholder indicates the bug-reporting address
-#. for this package.  Please add _another line_ saying
-#. "Report translation bugs to <...>\n" with the address for translation
-#. bugs (typically your translation team's web or email address).
-#: lib/version-etc.c:245
-#, c-format
-msgid ""
-"\n"
-"Report bugs to: %s\n"
-msgstr ""
-"\n"
-"請將臭蟲匯報至：%s\n"
-
-#: lib/version-etc.c:247
+#: lib/version-etc.c:251 lib/version-etc.c:247
 #, c-format
 msgid "Report %s bugs to: %s\n"
 msgstr "請將 %s 的臭蟲匯報至：%s\n"
 
-#: lib/version-etc.c:251
+#: lib/version-etc.c:255 lib/version-etc.c:257 lib/version-etc.c:251
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s 首頁：<%s>\n"
-
-#: lib/version-etc.c:253
-#, c-format
-msgid "%s home page: <https://www.gnu.org/software/%s/>\n"
-msgstr "%s 首頁：<https://www.gnu.org/software/%s/>\n"
-
-#: lib/version-etc.c:256
-msgid "General help using GNU software: <https://www.gnu.org/gethelp/>\n"
-msgstr "GNU 軟體一般性幫助：<https://www.gnu.org/gethelp/>\n"
 
 #: lib/xbinary-io.c:37
 #, c-format
 msgid "failed to set file descriptor text/binary mode"
 msgstr "無法將檔案描述符設定成文字 / 二進位模式"
+
+#: lib/xfreopen.c:34
+msgid "stdin"
+msgstr "標準輸入"
+
+#: lib/xfreopen.c:35
+msgid "stdout"
+msgstr "標準輸出"
+
+#: lib/xfreopen.c:36
+msgid "stderr"
+msgstr "標準錯誤"
+
+#: lib/xfreopen.c:37
+msgid "unknown stream"
+msgstr "未知串流"
+
+#: lib/xfreopen.c:38
+#, c-format
+msgid "failed to reopen %s with mode %s"
+msgstr "無法使用 %2$s 模式重開啟 %1$s"
 
 #: lib/xmemcoll.c:39 src/expr.c:1026
 #, c-format
@@ -855,6 +831,65 @@ msgstr "%s%s 參數「%s」有無效後綴"
 #, c-format
 msgid "%s%s argument '%s' too large"
 msgstr "%s%s 參數「%s」過長"
+
+#: lib/randread.c:128
+#, c-format
+msgid "%s: end of file"
+msgstr "%s：檔案結束"
+
+#: lib/randread.c:128 src/du.c:1073 src/md5sum.c:803 src/od.c:953 src/tac.c:251
+#: src/tac.c:357 src/tac.c:515 src/tac.c:596 src/wc.c:824
+#, c-format
+msgid "%s: read error"
+msgstr "%s：讀取發生錯誤"
+
+#: lib/root-dev-ino.h:37
+#, c-format
+msgid "it is dangerous to operate recursively on %s"
+msgstr "在 %s 進行遞迴操作十分危險"
+
+#: lib/root-dev-ino.h:41
+#, c-format
+msgid "it is dangerous to operate recursively on %s (same as %s)"
+msgstr "在 %s 進行遞迴操作十分危險 (與 %s 相同)"
+
+#: lib/root-dev-ino.h:43
+#, c-format
+msgid "use --no-preserve-root to override this failsafe"
+msgstr "使用 --no-preserve-root 選項跳過安全模式"
+
+#: lib/version-etc.c:85
+msgid ""
+"\n"
+"License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl."
+"html>.\n"
+"This is free software: you are free to change and redistribute it.\n"
+"There is NO WARRANTY, to the extent permitted by law.\n"
+"\n"
+msgstr ""
+"\n"
+"授權條款 GPLv3+：GNU 通用公共授權條款第 3 版或更新版本 <https://gnu.org/"
+"licenses/gpl.html>。\n"
+"本軟體是自由軟體：您可以自由修改和重新發布它。\n"
+"在法律範圍內沒有其他保證。\n"
+"\n"
+
+#. TRANSLATORS: The placeholder indicates the bug-reporting address
+#. for this package.  Please add _another line_ saying
+#. "Report translation bugs to <...>\n" with the address for translation
+#. bugs (typically your translation team's web or email address).
+#: lib/version-etc.c:245
+#, c-format
+msgid ""
+"\n"
+"Report bugs to: %s\n"
+msgstr ""
+"\n"
+"請將臭蟲匯報至：%s\n"
+
+#: lib/version-etc.c:256
+msgid "General help using GNU software: <https://www.gnu.org/gethelp/>\n"
+msgstr "GNU 軟體一般性幫助：<https://www.gnu.org/gethelp/>\n"
 
 #. This is a proper name. See the gettext manual, section Names.
 #: src/basename.c:29 src/chgrp.c:38 src/chmod.c:39 src/chown.c:37 src/comm.c:39
@@ -967,7 +1002,8 @@ msgstr "      --base64          與 'base64' 程式相同（RFC4648 section 4）
 
 #: src/basenc.c:121
 msgid "      --base64url       file- and url-safe base64 (RFC4648 section 5)\n"
-msgstr "      --base64url       檔案安全或者 URL 安全的 base64（RFC4648 section 5）\n"
+msgstr ""
+"      --base64url       檔案安全或者 URL 安全的 base64（RFC4648 section 5）\n"
 
 #: src/basenc.c:124
 msgid "      --base32          same as 'base32' program (RFC4648 section 6)\n"
@@ -1005,7 +1041,8 @@ msgid ""
 msgstr ""
 "  -d, --decode          解碼資料\n"
 "  -i, --ignore-garbag   解碼時忽略非字母字元\n"
-"  -w, --wrap=字元數     在指定的字元數後自動換行 (預設為76)，0 為停用自動換行\n"
+"  -w, --wrap=字元數     在指定的字元數後自動換行 (預設為76)，0 為停用自動換"
+"行\n"
 "\n"
 
 #: src/basenc.c:148
@@ -1682,7 +1719,8 @@ msgstr ""
 
 #: src/chroot.c:199
 msgid "  --userspec=USER:GROUP  specify user and group (ID or name) to use\n"
-msgstr "  --userspec=使用者:群組      指定使用者及使用者群組（可使用編號或名稱）\n"
+msgstr ""
+"  --userspec=使用者:群組      指定使用者及使用者群組（可使用編號或名稱）\n"
 
 #: src/chroot.c:202
 #, c-format
@@ -1876,20 +1914,6 @@ msgstr "無法 lseek %s"
 #, c-format
 msgid "error deallocating %s"
 msgstr "取消分配 %s 時發生錯誤"
-
-#: src/copy.c:242 src/dd.c:1859 src/dd.c:2195 src/du.c:1133 src/head.c:157
-#: src/head.c:308 src/head.c:390 src/head.c:586 src/head.c:668 src/head.c:737
-#: src/head.c:787 src/head.c:810 src/tail.c:464 src/tail.c:557 src/tail.c:606
-#: src/tail.c:699 src/tail.c:827 src/tail.c:875 src/tail.c:912 src/tail.c:2037
-#: src/tail.c:2070 src/uniq.c:473
-#, c-format
-msgid "error reading %s"
-msgstr "讀取 %s 時發生錯誤"
-
-#: src/copy.c:275 src/dd.c:2258 src/dd.c:2320 src/head.c:185 src/tail.c:438
-#, c-format
-msgid "error writing %s"
-msgstr "寫入 %s 時發生錯誤"
 
 #: src/copy.c:306
 #, c-format
@@ -2297,7 +2321,8 @@ msgid ""
 "                                 all\n"
 msgstr ""
 "  -p                           等於 --preserve=mode,ownership,timestamps\n"
-"      --preserve[=屬性列表]    保持指定的屬性 (預設：mode,ownership,timestamps)，可以的話\n"
+"      --preserve[=屬性列表]    保持指定的屬性 (預設：mode,ownership,"
+"timestamps)，可以的話\n"
 "                                 就保持附加屬性：context, links, xattr, all\n"
 
 #: src/cp.c:195
@@ -2427,11 +2452,6 @@ msgstr "保留 %s 的權限失敗"
 msgid "cannot make directory %s"
 msgstr "無法建立目錄 %s"
 
-#: src/cp.c:522 src/cp.c:553
-#, c-format
-msgid "%s exists but is not a directory"
-msgstr "%s已存在但不是目錄"
-
 #: src/cp.c:585 src/cp.c:1087 src/install.c:407 src/install.c:942 src/ln.c:204
 #: src/ln.c:231 src/ln.c:536 src/mv.c:160 src/mv.c:393
 #, c-format
@@ -2451,7 +2471,8 @@ msgstr "在 %s 後缺少了要操作的目標檔案"
 
 #: src/cp.c:617 src/install.c:981 src/mv.c:447
 msgid "cannot combine --target-directory (-t) and --no-target-directory (-T)"
-msgstr "無法同時使用 --target-directory (-t) 和 --no-target-directory (-T) 選項"
+msgstr ""
+"無法同時使用 --target-directory (-t) 和 --no-target-directory (-T) 選項"
 
 #: src/cp.c:635 src/cp.c:1090 src/install.c:409 src/install.c:945
 #: src/install.c:994 src/ln.c:539 src/mv.c:396 src/mv.c:468
@@ -2737,7 +2758,8 @@ msgid ""
 "                            the default is to use the input delimiter\n"
 msgstr ""
 "  -s, --only-delimited    不列印沒有包含分隔符號的行\n"
-"      --output-delimiter=字串    使用指定的字串作為輸出分隔符號，預設採用輸入\n"
+"      --output-delimiter=字串    使用指定的字串作為輸出分隔符號，預設採用輸"
+"入\n"
 "                             的分隔符號\n"
 
 #: src/cut.c:183
@@ -2748,8 +2770,8 @@ msgid ""
 "in the same order that it is read, and is written exactly once.\n"
 msgstr ""
 "\n"
-"僅使用 -b, -c 或 -f 中的一個。每一個列表都是專門為一個類別作出的，或者您可以用"
-"逗號隔開\n"
+"僅使用 -b, -c 或 -f 中的一個。每一個列表都是專門為一個類別作出的，或者您可以"
+"用逗號隔開\n"
 "開要同時顯示的不同類別。您的輸入順序將作為讀取順序，每個僅能輸入一次。\n"
 
 #: src/cut.c:189
@@ -2807,7 +2829,8 @@ msgstr "以指定 <格式> 字串的形式顯示目前時間，或者設定系�
 #: src/date.c:141
 msgid ""
 "  -d, --date=STRING          display time described by STRING, not 'now'\n"
-msgstr "  -d, --date=字串          顯示指定 <字串> 描述的時間，而非「目前時間」\n"
+msgstr ""
+"  -d, --date=字串          顯示指定 <字串> 描述的時間，而非「目前時間」\n"
 
 #: src/date.c:144
 msgid ""
@@ -2821,7 +2844,8 @@ msgstr ""
 #: src/date.c:148
 msgid ""
 "  -f, --file=DATEFILE        like --date; once for each line of DATEFILE\n"
-msgstr "  -f, --file=日期檔案        類似 --date；使用指定<日期檔案>，一次處理一行\n"
+msgstr ""
+"  -f, --file=日期檔案        類似 --date；使用指定<日期檔案>，一次處理一行\n"
 
 #: src/date.c:151
 msgid ""
@@ -4632,7 +4656,8 @@ msgstr "無效的寬度"
 
 #: src/fold.c:70
 msgid "Wrap input lines in each FILE, writing to standard output.\n"
-msgstr "對每個指定的檔案設定自動換行（折行），並將重新排版後的結果輸出到標準輸出。\n"
+msgstr ""
+"對每個指定的檔案設定自動換行（折行），並將重新排版後的結果輸出到標準輸出。\n"
 
 #: src/fold.c:77
 msgid ""
@@ -5123,7 +5148,8 @@ msgstr "無法清除 %s 的連結（unlink 失敗）"
 #, c-format
 msgid ""
 "WARNING: ignoring --preserve-context; this kernel is not SELinux-enabled"
-msgstr "警告：忽略 --preserve-context 參數；目前執行的核心沒有啟用 SELinux 支援"
+msgstr ""
+"警告：忽略 --preserve-context 參數；目前執行的核心沒有啟用 SELinux 支援"
 
 #: src/install.c:932
 msgid "the strip option may not be used when installing a directory"
@@ -6312,7 +6338,8 @@ msgstr "以指定的<名稱>建立命名管道（FIFO）。\n"
 #: src/mkfifo.c:61 src/mknod.c:63
 msgid ""
 "  -m, --mode=MODE    set file permission bits to MODE, not a=rw - umask\n"
-msgstr "  -m, --mode=模式    設定權限模式(類似 chmod)，而不是 rwxrwxrwx 減 umask\n"
+msgstr ""
+"  -m, --mode=模式    設定權限模式(類似 chmod)，而不是 rwxrwxrwx 減 umask\n"
 
 #: src/mkfifo.c:64 src/mknod.c:66
 msgid ""
@@ -6998,7 +7025,8 @@ msgstr ""
 #: src/numfmt.c:939
 msgid ""
 "      --to=UNIT        auto-scale output numbers to UNITs; see UNIT below\n"
-msgstr "      --to=單位        自動將輸出數字進位至 <單位>；請參閱下方〈單位〉部份\n"
+msgstr ""
+"      --to=單位        自動將輸出數字進位至 <單位>；請參閱下方〈單位〉部份\n"
 
 #: src/numfmt.c:942
 msgid ""
@@ -8515,7 +8543,8 @@ msgid ""
 "                          always (-i); without WHEN, prompt always\n"
 msgstr ""
 "  -I                    當在遞迴移除多於 3 個檔案前提示一次；\n"
-"                          不會和 -i 一樣如此煩人，但仍能保護大部分的失誤行為\n"
+"                          不會和 -i 一樣如此煩人，但仍能保護大部分的失誤行"
+"為\n"
 "      --interactive[=WHEN]  根據 WHEN 提示：never, once (-I) 或 always (-"
 "i)；\n"
 "                          如果沒指定 WHEN，則使用 always\n"
@@ -9960,7 +9989,8 @@ msgstr ""
 #. 'stat --help' without --file-system, and NOT from printf.
 #: src/stat.c:1466
 msgid "Device: %Dh/%dd\tInode: %-10i  Links: %-5h Device type: %t,%T\n"
-msgstr "裝置：%Dh/%dd\tInode：%-10i  實際連結 (hardlink) ：%-5h 裝置類型：%t,%T\n"
+msgstr ""
+"裝置：%Dh/%dd\tInode：%-10i  實際連結 (hardlink) ：%-5h 裝置類型：%t,%T\n"
 
 #. TRANSLATORS: This string uses format specifiers from
 #. 'stat --help' without --file-system, and NOT from printf.
@@ -10950,7 +10980,8 @@ msgstr ""
 "\n"
 "處理連結到標準輸入的 tty 終端行設定。當不附加參數時，程式會輸出波特率、行約"
 "束\n"
-"規則以及與標準 stty 設定間的偏差。在設定中，字元會被逐字讀取或是被編碼為 ^c、\n"
+"規則以及與標準 stty 設定間的偏差。在設定中，字元會被逐字讀取或是被編碼為 "
+"^c、\n"
 "0x37、0177 或 127 這樣的字元，其中有特殊值 ^- 或 undef 被用於禁止特殊字元。\n"
 
 #: src/stty.c:1097
@@ -12230,7 +12261,8 @@ msgstr ""
 msgid ""
 "warning: the ambiguous octal escape \\%c%c%c is being\n"
 "\tinterpreted as the 2-byte sequence \\0%c%c, %c"
-msgstr "警告：含義不清的八進位內容 \\%c%c%c 已被視作為雙位元組序列 \\0%c%c, %c 處理"
+msgstr ""
+"警告：含義不清的八進位內容 \\%c%c%c 已被視作為雙位元組序列 \\0%c%c, %c 處理"
 
 #: src/tr.c:516
 #, c-format
@@ -12900,10 +12932,6 @@ msgstr ""
 "# 使用者數=%lu\n"
 
 #: src/who.c:563
-msgid "NAME"
-msgstr "名稱"
-
-#: src/who.c:563
 msgid "LINE"
 msgstr "線路"
 
@@ -13031,21 +13059,15 @@ msgstr ""
 "重複輸出一行指定的字串，或者重複輸出\"y\"。\n"
 "\n"
 
-#~ msgid "stdin"
-#~ msgstr "標準輸入"
-
-#~ msgid "stdout"
-#~ msgstr "標準輸出"
-
-#~ msgid "stderr"
-#~ msgstr "標準錯誤"
-
-#~ msgid "unknown stream"
-#~ msgstr "未知串流"
-
+#: lib/version-etc.c:253
 #, c-format
-#~ msgid "failed to reopen %s with mode %s"
-#~ msgstr "無法使用 %2$s 模式重開啟 %1$s"
+msgid "%s home page: <https://www.gnu.org/software/%s/>\n"
+msgstr "%s 首頁：<https://www.gnu.org/software/%s/>\n"
 
-#~ msgid "%s: illegal option -- %c\n"
-#~ msgstr "%s：不合法的選項 ─ %c\n"
+msgid "%s: illegal option -- %c\n"
+msgstr "%s：不合法的選項 ─ %c\n"
+
+#: src/cp.c:522 src/cp.c:553
+#, c-format
+msgid "%s exists but is not a directory"
+msgstr "%s已存在但不是目錄"
