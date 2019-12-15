@@ -248,7 +248,7 @@ msgstr "所有請求完成"
 
 #: lib/gai_strerror.c:74
 msgid "Interrupted by a signal"
-msgstr "遭信號中止"
+msgstr "遭信號中斷"
 
 #: lib/gai_strerror.c:75
 msgid "Parameter string not correctly encoded"
@@ -458,11 +458,11 @@ msgstr "掛斷"
 
 #: lib/siglist.h:34
 msgid "Interrupt"
-msgstr "中止"
+msgstr "中斷"
 
 #: lib/siglist.h:37
 msgid "Quit"
-msgstr "結束"
+msgstr "退出"
 
 #: lib/siglist.h:40
 msgid "Illegal instruction"
@@ -474,11 +474,11 @@ msgstr "追蹤 / 斷點陷阱"
 
 #: lib/siglist.h:46
 msgid "Aborted"
-msgstr "取消"
+msgstr "中止"
 
 #: lib/siglist.h:49
 msgid "Floating point exception"
-msgstr "期望浮點數"
+msgstr "浮點數例外"
 
 #: lib/siglist.h:52
 msgid "Killed"
